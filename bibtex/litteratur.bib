@@ -1,0 +1,360 @@
+%%%% Guide til bibtex og litteratur.bib %%%%
+
+% Alle kilder angives efter Harvard-metoden og vil i rapporten fremstaa med [FORFATTER, AAR] eller mere praecist [EFTERNAVN, AAR].
+
+% Nederst findes eksempler paa kildeangivelser af typerne manual, book, article, techreport og misc.
+	% - Manual bruges ved henvisninger fra internettet, idet \url-funktionen findes her
+	% - Book bruges ved helt almindelige boeger
+	% - Article bruges ved artikler og udgivelser
+	% - Techreport kan bruges ved mindre udgivelser, hvor kun titel, forfatter og AAR er noedvendig eller tilgaengelig
+	% - Misc kan bruges ved det, der falder udenfor de andre kategorier - interview, forelaesninger, foredrag osv. 
+
+% Hvis der er flere forfattere paa en kilde, SKAL de listes med 'and' imellem dem - ogsaa ved 3 og derover (f.eks. FORFATTER 1 and FORFATTER 2 and FORFATTER 3). NAAR kildelisten bygges i rapporten, vil der ved 2 forfattere komme til at staa [EFTERNAVN 1 og EFTERNAVN 2, AAR] og ved 3 forfattere og derover komme til at staa [EFTERNAVN 1 et. al, AAR]. 
+
+% Ved almindelige forfatternavne skal der vaere ét saet tuborg-parenteser ved Author (f.eks. author = {H. C. Andersen}). Ved andre navne (f.eks. virksomheder, hjemmesider, grupper, raad, naevn osv.) skal der vaere 2 saet tuborg-parenteser ved Author (f.eks. author = {{Dansk Standard}}). Begrundelse: med 2 saet tuborg-parenteser skrives hele parentesen ud som forfatter, [Dansk Standard, AAR]. Alternativt ville der i eksemplet bare komme til at staa [Standard, AAR].
+
+%-----------------------------------------------------%
+
+%%%% EKSEMPLER (manual, book, article, techreport og misc) %%%%
+
+%%%% SYNTAX: http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management %%%%
+%%%% "+" = punkter der SKAL være i kategorien	 %%%%
+%%%% Kopier evt. skabeloner fra hjemmesiden :) %%%%
+
+@manual
+{
+	TPR_calc,
+	author = "{Lerch Alexander}",
+    title = "An Introduction to Audio Content Analysis",
+    month = "Spring",
+    year = "2012",
+    edition = "1"
+},
+
+@manual
+{
+	filter_calc,
+	author = "{Aliyazicioglu, Z.}",
+    title = "Active Filter Circuits - Electrical and Computer Engineering Department
+Cal Poly Pomona",
+    month = "Spring",
+    year = "2015",
+    edition = "2"
+},
+
+@manual
+{
+	C_Cpp_man_for_bf,
+	author = "{Analog Devices, Inc.}",
+    title = "C/Cpp Compiler and Library Manual for Blackfin Processors",
+    month = "May",
+    year = "2014",
+    edition = "Rev 1.3"
+},
+
+@manual
+{
+	AD1836,
+	author = "{Analog Devices, Inc.}",
+    title = "AD1836",
+    month = "Januar",
+    year = "2001",
+    edition = "Rev PrC"
+},
+
+@manual
+{
+	website:smooth,
+	author = "{The MathWorks, Inc.}",
+    title = "smooth - Smooth response data",
+    month = "21. maj",
+    year = "2015",
+    url = "http://se.mathworks.com/help/curvefit/smooth.html"
+},
+
+@manual
+{
+	website:max,
+	author = "{The MathWorks, Inc.}",
+    title = "max - Largest elements in array",
+    month = "21. maj",
+    year = "2015",
+    url = "http://se.mathworks.com/help/matlab/ref/max.html"
+},
+
+@manual
+{
+	website:raspi-power,
+	author = "{Mosaic Industries, Inc.}",
+    title = "GPIO Electrical Specifications",
+    month = "21. maj",
+    year = "2015",
+    url = "http://www.mosaic-industries.com/embedded-systems/microcontroller-projects/raspberry-pi/gpio-pin-electrical-specifications"
+},
+
+@manual
+{
+	website:physicstoolbox,
+	author = "{Vieyra Software}",
+    title = "Vieyra Software Physics toolbox",
+    month = "maj",
+    year = "2015",
+    url = "http://www.vieyrasoftware.net/"
+},
+
+@manual
+{
+	aau:formalia,
+	author = "{Århus Universitet}",
+    title = "FORMALIA - skriftlig aflevering",
+    month = "14. januar",
+    year = "2015",
+    url = "http://studerende.au.dk/studier/fagportaler/arts/eksamen/formalia/"
+},
+
+@manual
+{
+	website:ssmtpmailutils,
+	author = "Dweeber",
+    title = "Guide to ssmtp and mailutils",
+    month = "Februar",
+    year = "2015",
+    url = "https://rpi.tnet.com/project/faqs/smtp"
+},
+
+@manual
+{
+	website:ic2lib,
+	author = "{Hussam Al-Hertani}",
+    title = "C++ Library to communicate on I2C",
+    month = "Februar",
+    year = "2015",
+    url = "http://hertaville.com/2013/04/01/interfacing-an-i2c-gpio-expander-mcp23017-to-the-raspberry-pi-using-c/"
+},
+
+@manual
+{
+	website:wiringpi,
+	author = "{Gordon Henderson}",
+    title = "WiringPi - GPIO access library",
+    month = "Februar",
+    year = "2015",
+    url = "http://wiringpi.com/"
+},
+
+@manual
+{
+	website:rpitoolchain,
+	author = "{GitHub brugere}",
+    title = "Raspberry Pi Linux Toolchain",
+    month = "Februar",
+    year = "2015",
+    url = "https://github.com/raspberrypi/tools"
+},
+
+@manual
+{
+	website:flask,
+	author = "{Armin Ronacher}",
+    title = "Flask Dokumentation",
+    month = "Januar",
+    year = "2014",
+    url = "http://flask.pocoo.org/"
+},
+
+@manual
+{
+	website:BCD,
+	author = "{Armin Ronacher}",
+    title = "Flask BCD license",
+    month = "Januar",
+    year = "2013",
+    url = "http://flask.pocoo.org/docs/0.10/license/"
+},
+
+
+@manual
+{
+	website:eclipsekepler,
+	author = "{Eclipse Packaging Project}",
+    title = "Eclipse IDE for C/C++ Developers Kepler Release",
+    month = "Maj",
+    year = "2015",
+    url = "https://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplerr"
+},
+
+@manual
+{
+	IRT,
+	author = "{Carl Jakobsen}",
+    title = "Analysis and Design procedure",
+    month = "Januar",
+    year = "2015",
+},
+
+@manual
+{
+	website:atan,
+	author = "{dspGuru fp atan2}",
+      	title = "DSP Trick: Fixed-Point Atan2 With Self Normalization",
+      	month = "April",
+      	year = "1999",
+      	url = "http://dspguru.com//dsp/tricks/fixed-point-atan2-with-self-normalization"
+},
+
+@manual{
+	website:Mathworks,
+	author = "Mathworks",
+      	title = "max ",
+      	month = "",
+      	year = "1994-2015",
+      	url = "http://se.mathworks.com/help/matlab/ref/max.html?searchHighlight=max"
+},
+
+@manual
+{
+	website:Cypress,
+	author = "Cypress",
+    title = "CY8CKIT-042 PSoC 4 Pioneer Kit",
+    month = "Februar",
+    year = "2014",
+    url = "http://www.cypress.com/?rid=77780"
+},
+
+@manual
+{
+	website:PSoC_Creator,
+	author = "Cypress",
+    title = "Cypress PSoC Creator 3",
+    month = "Januar",
+    year = "2015",
+    url = "http://www.cypress.com/psoccreator/"
+},
+
+
+@manual
+{
+	website:Clinometer,
+	author = "Plaincode",
+    title = "Clinometer by Plaincode",
+    month = "Juli",
+    year = "2014",
+    version = "2.0",
+    url = "http://www.plaincode.com/products/clinometer/"
+},
+
+@manual
+{
+	website:Samsung,
+	author = "Samsung",
+    title = "Samsung Galaxy S4 Mini",
+    month = "Januar",
+    year = "2015",
+    url = "http://www.samsung.com/dk/consumer/mobile-devices/smartphones/galaxy-s/GT-I9195ZWANEE"
+},
+
+@manual
+{
+	website:Mobizen,
+	author = "{RSUPPORT Co., Ltd.}",
+    title = "Mobizen by RSUPPORT Co., Ltd.",
+    month = "April",
+    year = "2015",
+    version = "2.14.0.5",
+    url = "https://mobizen.com/"
+},
+
+@manual
+{
+	website:Excel,
+	author = "{Microsoft Corporation}",
+    title = "Microsoft Office Excel",
+    month = "Oktober",
+    year = "2013",
+    version = "Excel 2013 (v15.0)",
+    url = "https://products.office.com/da-dk/excel"
+},
+
+@manual
+{
+	website:Windows_8_1,
+	author = "{Microsoft Corporation}",
+    title = "Microsoft Windows 8.1",
+    month = "April",
+    year = "2014",
+    version = "8.1",
+    url = "http://www.microsoftstore.com/store/mseea/da_DK/pdp/Windows-8.1/productID.288573000"
+},
+
+@manual
+{
+	analogD,
+	author = "{Mircea Dabacan}",
+    title = "Discovery\_TRM\_RevC\_1",
+    month = "Oktober",
+    year = "2013",
+	edition = "Rev 10/10/2013"
+},
+
+@misc
+{
+	cd,
+	author = "Bilags-CD",
+	title = "CD med bilag tilhørende E4GRP1",
+	year	 = "2015" 
+}
+
+
+@manual
+{
+	I2C,
+	author = "Philips",
+    title = "UM10204\_I2C",
+    month = "April",
+    year = "2014",
+    edition = "Rev. 6"
+},
+
+@manual
+{
+	website:scrum,
+	author = "{Eclipse}",
+    title = "Scrum Overview",
+    month = "Januar",
+    year = "2008",
+    version = "1.0",
+    url = "http://epf.eclipse.org/wikis/scrum/0"
+},
+
+@manual
+{
+	website:uml,
+	author = "{Object Management Group}",
+    title = "Unified Modeling Language",
+    month = "Januar",
+    year = "2015",
+    url = "http://www.uml.org/"
+},
+
+@manual
+{
+	website:sysml,
+	author = "{SysML Open Source Specification Project Community}",
+    title = "Systems Modeling Language",
+    month = "Januar",
+    year = "2015",
+    url = "http://sysml.org/"
+},
+
+
+
+@manual
+{
+	EzKit,
+	author = "Analog Devices, Inc.",
+    title = "ADSP-BF533\_ezkit\_man\_rev.3.2",
+    month = "Juli",
+    year = "2012",
+    edition = "Rev. 3.2"
+}
+
