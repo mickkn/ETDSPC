@@ -1,0 +1,51 @@
+	component SOPC_Video is
+		port (
+			VGA_CLK_from_the_VGA_Controller                 : out   std_logic;                                        -- CLK
+			VGA_HS_from_the_VGA_Controller                  : out   std_logic;                                        -- HS
+			VGA_VS_from_the_VGA_Controller                  : out   std_logic;                                        -- VS
+			VGA_BLANK_from_the_VGA_Controller               : out   std_logic;                                        -- BLANK
+			VGA_SYNC_from_the_VGA_Controller                : out   std_logic;                                        -- SYNC
+			VGA_R_from_the_VGA_Controller                   : out   std_logic_vector(9 downto 0);                     -- R
+			VGA_G_from_the_VGA_Controller                   : out   std_logic_vector(9 downto 0);                     -- G
+			VGA_B_from_the_VGA_Controller                   : out   std_logic_vector(9 downto 0);                     -- B
+			clk_0                                           : in    std_logic                     := 'X';             -- clk
+			reset_n                                         : in    std_logic                     := 'X';             -- reset_n
+			I2C_SDAT_to_and_from_the_AV_Config              : inout std_logic                     := 'X';             -- SDAT
+			I2C_SCLK_from_the_AV_Config                     : out   std_logic;                                        -- SCLK
+			SRAM_DQ_to_and_from_the_Pixel_Buffer            : inout std_logic_vector(15 downto 0) := (others => 'X'); -- DQ
+			SRAM_ADDR_from_the_Pixel_Buffer                 : out   std_logic_vector(17 downto 0);                    -- ADDR
+			SRAM_LB_N_from_the_Pixel_Buffer                 : out   std_logic;                                        -- LB_N
+			SRAM_UB_N_from_the_Pixel_Buffer                 : out   std_logic;                                        -- UB_N
+			SRAM_CE_N_from_the_Pixel_Buffer                 : out   std_logic;                                        -- CE_N
+			SRAM_OE_N_from_the_Pixel_Buffer                 : out   std_logic;                                        -- OE_N
+			SRAM_WE_N_from_the_Pixel_Buffer                 : out   std_logic;                                        -- WE_N
+			Video_In_Decoder_external_interface_PIXEL_CLK   : in    std_logic                     := 'X';             -- PIXEL_CLK
+			Video_In_Decoder_external_interface_LINE_VALID  : in    std_logic                     := 'X';             -- LINE_VALID
+			Video_In_Decoder_external_interface_FRAME_VALID : in    std_logic                     := 'X';             -- FRAME_VALID
+			Video_In_Decoder_external_interface_PIXEL_DATA  : in    std_logic_vector(11 downto 0) := (others => 'X'); -- PIXEL_DATA
+			vga_clk                                         : out   std_logic;                                        -- clk
+			bypass_export                                   : in    std_logic                     := 'X';             -- export
+			sdram_wire_addr                                 : out   std_logic_vector(11 downto 0);                    -- addr
+			sdram_wire_ba                                   : out   std_logic_vector(1 downto 0);                     -- ba
+			sdram_wire_cas_n                                : out   std_logic;                                        -- cas_n
+			sdram_wire_cke                                  : out   std_logic;                                        -- cke
+			sdram_wire_cs_n                                 : out   std_logic;                                        -- cs_n
+			sdram_wire_dq                                   : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
+			sdram_wire_dqm                                  : out   std_logic_vector(1 downto 0);                     -- dqm
+			sdram_wire_ras_n                                : out   std_logic;                                        -- ras_n
+			sdram_wire_we_n                                 : out   std_logic;                                        -- we_n
+			lcd_ext_data                                    : inout std_logic_vector(7 downto 0)  := (others => 'X'); -- data
+			lcd_ext_E                                       : out   std_logic;                                        -- E
+			lcd_ext_RS                                      : out   std_logic;                                        -- RS
+			lcd_ext_RW                                      : out   std_logic;                                        -- RW
+			red_leds_ext_export                             : out   std_logic_vector(7 downto 0);                     -- export
+			green_leds_ext_export                           : out   std_logic_vector(7 downto 0);                     -- export
+			switch_ext_export                               : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			altera_up_sd_card_b_SD_cmd                      : inout std_logic                     := 'X';             -- b_SD_cmd
+			altera_up_sd_card_b_SD_dat                      : inout std_logic                     := 'X';             -- b_SD_dat
+			altera_up_sd_card_b_SD_dat3                     : inout std_logic                     := 'X';             -- b_SD_dat3
+			altera_up_sd_card_o_SD_clock                    : out   std_logic;                                        -- o_SD_clock
+			sdram_clk_clk                                   : out   std_logic                                         -- clk
+		);
+	end component SOPC_Video;
+
