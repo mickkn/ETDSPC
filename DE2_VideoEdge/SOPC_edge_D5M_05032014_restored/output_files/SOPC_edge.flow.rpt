@@ -1,0 +1,271 @@
+Flow report for SOPC_edge
+Fri Mar 04 13:29:55 2016
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Fri Mar 04 13:29:55 2016           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; SOPC_edge                                       ;
+; Top-level Entity Name              ; Video_Edge_Detection                            ;
+; Family                             ; Cyclone II                                      ;
+; Device                             ; EP2C35F672C6                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 9,949 / 33,216 ( 30 % )                         ;
+;     Total combinational functions  ; 9,061 / 33,216 ( 27 % )                         ;
+;     Dedicated logic registers      ; 6,580 / 33,216 ( 20 % )                         ;
+; Total registers                    ; 6648                                            ;
+; Total pins                         ; 208 / 475 ( 44 % )                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 265,368 / 483,840 ( 55 % )                      ;
+; Embedded Multiplier 9-bit elements ; 11 / 70 ( 16 % )                                ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 03/04/2016 13:25:18 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; SOPC_edge           ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                    ;
++-------------------------------------+--------------------------------------------------------------------+---------------+---------------------------------------------------------+----------------+
+; Assignment Name                     ; Value                                                              ; Default Value ; Entity Name                                             ; Section Id     ;
++-------------------------------------+--------------------------------------------------------------------+---------------+---------------------------------------------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 121367230331.145709431503848                                       ; --            ; --                                                      ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                               ; --            ; --                                                      ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                             ; <None>        ; --                                                      ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video                                              ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_CPU                                          ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_CPU_custom_instruction_master_multi_xconnect ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_Onchip_Memory                                ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_addr_router                                  ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_addr_router_001                              ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_addr_router_002                              ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_cmd_xbar_demux                               ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_cmd_xbar_demux_001                           ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_cmd_xbar_demux_002                           ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_cmd_xbar_mux                                 ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_cmd_xbar_mux_002                             ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_cmd_xbar_mux_003                             ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_id_router                                    ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_id_router_002                                ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_id_router_003                                ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_id_router_004                                ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_irq_mapper                                   ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_jtag_uart_0                                  ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_lcd                                          ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_red_leds                                     ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_rsp_xbar_demux                               ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_rsp_xbar_demux_002                           ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_rsp_xbar_demux_003                           ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_rsp_xbar_demux_004                           ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_rsp_xbar_mux                                 ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_rsp_xbar_mux_001                             ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_sdram_0                                      ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_switch                                       ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_sysid_qsys_0                                 ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; SOPC_Video_timer_system                                 ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_avalon_sc_fifo                                   ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_customins_master_translator                      ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_customins_slave_translator                       ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_merlin_burst_adapter                             ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_merlin_master_agent                              ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_merlin_master_translator                         ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_merlin_slave_agent                               ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_merlin_slave_translator                          ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_merlin_traffic_limiter                           ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_merlin_width_adapter                             ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; altera_reset_controller                                 ; --             ;
+; IP_TOOL_ENV                         ; qsys                                                               ; --            ; fpoint_wrapper                                          ; --             ;
+; IP_TOOL_NAME                        ; RAM: 2-PORT                                                        ; --            ; --                                                      ; --             ;
+; IP_TOOL_NAME                        ; qsys                                                               ; --            ; SOPC_Video                                              ; --             ;
+; IP_TOOL_NAME                        ; altera_nios2_qsys                                                  ; --            ; SOPC_Video_CPU                                          ; --             ;
+; IP_TOOL_NAME                        ; altera_customins_xconnect                                          ; --            ; SOPC_Video_CPU_custom_instruction_master_multi_xconnect ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_onchip_memory2                                       ; --            ; SOPC_Video_Onchip_Memory                                ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                               ; --            ; SOPC_Video_addr_router                                  ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                               ; --            ; SOPC_Video_addr_router_001                              ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                               ; --            ; SOPC_Video_addr_router_002                              ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                        ; --            ; SOPC_Video_cmd_xbar_demux                               ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                        ; --            ; SOPC_Video_cmd_xbar_demux_001                           ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                        ; --            ; SOPC_Video_cmd_xbar_demux_002                           ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                          ; --            ; SOPC_Video_cmd_xbar_mux                                 ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                          ; --            ; SOPC_Video_cmd_xbar_mux_002                             ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                          ; --            ; SOPC_Video_cmd_xbar_mux_003                             ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                               ; --            ; SOPC_Video_id_router                                    ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                               ; --            ; SOPC_Video_id_router_002                                ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                               ; --            ; SOPC_Video_id_router_003                                ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                               ; --            ; SOPC_Video_id_router_004                                ; --             ;
+; IP_TOOL_NAME                        ; altera_irq_mapper                                                  ; --            ; SOPC_Video_irq_mapper                                   ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_jtag_uart                                            ; --            ; SOPC_Video_jtag_uart_0                                  ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_lcd_16207                                            ; --            ; SOPC_Video_lcd                                          ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_pio                                                  ; --            ; SOPC_Video_red_leds                                     ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                        ; --            ; SOPC_Video_rsp_xbar_demux                               ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                        ; --            ; SOPC_Video_rsp_xbar_demux_002                           ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                        ; --            ; SOPC_Video_rsp_xbar_demux_003                           ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                        ; --            ; SOPC_Video_rsp_xbar_demux_004                           ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                          ; --            ; SOPC_Video_rsp_xbar_mux                                 ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                          ; --            ; SOPC_Video_rsp_xbar_mux_001                             ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_new_sdram_controller                                 ; --            ; SOPC_Video_sdram_0                                      ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_pio                                                  ; --            ; SOPC_Video_switch                                       ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_sysid_qsys                                           ; --            ; SOPC_Video_sysid_qsys_0                                 ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_timer                                                ; --            ; SOPC_Video_timer_system                                 ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_sc_fifo                                              ; --            ; altera_avalon_sc_fifo                                   ; --             ;
+; IP_TOOL_NAME                        ; altera_customins_master_translator                                 ; --            ; altera_customins_master_translator                      ; --             ;
+; IP_TOOL_NAME                        ; altera_customins_slave_translator                                  ; --            ; altera_customins_slave_translator                       ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_burst_adapter                                        ; --            ; altera_merlin_burst_adapter                             ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_master_agent                                         ; --            ; altera_merlin_master_agent                              ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_master_translator                                    ; --            ; altera_merlin_master_translator                         ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_slave_agent                                          ; --            ; altera_merlin_slave_agent                               ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_slave_translator                                     ; --            ; altera_merlin_slave_translator                          ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_traffic_limiter                                      ; --            ; altera_merlin_traffic_limiter                           ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_width_adapter                                        ; --            ; altera_merlin_width_adapter                             ; --             ;
+; IP_TOOL_NAME                        ; altera_reset_controller                                            ; --            ; altera_reset_controller                                 ; --             ;
+; IP_TOOL_NAME                        ; altera_nios_custom_instr_floating_point                            ; --            ; fpoint_wrapper                                          ; --             ;
+; IP_TOOL_VERSION                     ; 8.0                                                                ; --            ; --                                                      ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video                                              ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_CPU                                          ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_CPU_custom_instruction_master_multi_xconnect ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_Onchip_Memory                                ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_addr_router                                  ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_addr_router_001                              ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_addr_router_002                              ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_cmd_xbar_demux                               ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_cmd_xbar_demux_001                           ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_cmd_xbar_demux_002                           ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_cmd_xbar_mux                                 ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_cmd_xbar_mux_002                             ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_cmd_xbar_mux_003                             ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_id_router                                    ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_id_router_002                                ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_id_router_003                                ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_id_router_004                                ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_irq_mapper                                   ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_jtag_uart_0                                  ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_lcd                                          ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_red_leds                                     ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_rsp_xbar_demux                               ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_rsp_xbar_demux_002                           ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_rsp_xbar_demux_003                           ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_rsp_xbar_demux_004                           ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_rsp_xbar_mux                                 ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_rsp_xbar_mux_001                             ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_sdram_0                                      ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_switch                                       ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_sysid_qsys_0                                 ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; SOPC_Video_timer_system                                 ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_avalon_sc_fifo                                   ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_customins_master_translator                      ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_customins_slave_translator                       ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_merlin_burst_adapter                             ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_merlin_master_agent                              ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_merlin_master_translator                         ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_merlin_slave_agent                               ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_merlin_slave_translator                          ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_merlin_traffic_limiter                           ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_merlin_width_adapter                             ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; altera_reset_controller                                 ; --             ;
+; IP_TOOL_VERSION                     ; 12.1                                                               ; --            ; fpoint_wrapper                                          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                 ; --            ; --                                                      ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                  ; --            ; --                                                      ; --             ;
+; MISC_FILE                           ; SOPC_Video/synthesis/../../SOPC_Video.cmp                          ; --            ; --                                                      ; --             ;
+; MISC_FILE                           ; SOPC_Video/synthesis/../../SOPC_Video.qsys                         ; --            ; --                                                      ; --             ;
+; MISC_FILE                           ; SOPC_Video/synthesis/submodules/Altera_UP_SD_Card_Memory_Block.bsf ; --            ; --                                                      ; --             ;
+; MISC_FILE                           ; SOPC_Video/synthesis/submodules/Altera_UP_SD_Card_Memory_Block.cmp ; --            ; --                                                      ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                           ; --            ; Video_Edge_Detection                                    ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                              ; --            ; Video_Edge_Detection                                    ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                             ; --            ; Video_Edge_Detection                                    ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                ; --            ; --                                                      ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                              ; --            ; --                                                      ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                       ; --            ; --                                                      ; --             ;
+; SEARCH_PATH                         ; SOPC_Video/synthesis/                                              ; --            ; --                                                      ; --             ;
+; SEARCH_PATH                         ; SOPC_Video/synthesis/submodules/                                   ; --            ; --                                                      ; --             ;
+; SEARCH_PATH                         ; output_files/                                                      ; --            ; --                                                      ; --             ;
+; SLD_INFO                            ; QSYS_NAME SOPC_Video HAS_SOPCINFO 1 GENERATION_ID 1368308576       ; --            ; SOPC_Video                                              ; --             ;
+; SOPCINFO_FILE                       ; SOPC_Video/synthesis/../../SOPC_Video.sopcinfo                     ; --            ; --                                                      ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                 ; --            ; --                                                      ; --             ;
+; TOP_LEVEL_ENTITY                    ; Video_Edge_Detection                                               ; SOPC_edge     ; --                                                      ; --             ;
++-------------------------------------+--------------------------------------------------------------------+---------------+---------------------------------------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:01:50     ; 1.0                     ; 552 MB              ; 00:01:30                           ;
+; Fitter                    ; 00:01:42     ; 1.0                     ; 661 MB              ; 00:01:38                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 390 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:14     ; 1.0                     ; 482 MB              ; 00:00:11                           ;
+; EDA Netlist Writer        ; 00:00:17     ; 1.0                     ; 423 MB              ; 00:00:14                           ;
+; Total                     ; 00:04:08     ; --                      ; --                  ; 00:03:38                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
+; Fitter                    ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
+; Assembler                 ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
+; TimeQuest Timing Analyzer ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
+; EDA Netlist Writer        ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off SOPC_edge -c SOPC_edge
+quartus_fit --read_settings_files=off --write_settings_files=off SOPC_edge -c SOPC_edge
+quartus_asm --read_settings_files=off --write_settings_files=off SOPC_edge -c SOPC_edge
+quartus_sta SOPC_edge -c SOPC_edge
+quartus_eda --read_settings_files=off --write_settings_files=off SOPC_edge -c SOPC_edge
+
+
+

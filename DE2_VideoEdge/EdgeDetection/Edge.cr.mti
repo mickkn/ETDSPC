@@ -1,0 +1,125 @@
+C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_pixel_info_shift_register.vhd {1 {vcom -work work -2002 -explicit C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_pixel_info_shift_register.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity altera_up_edge_detection_pixel_info_shift_register
+-- Compiling architecture SYN of altera_up_edge_detection_pixel_info_shift_register
+
+} {} {}} C:/IHAK/ETDSPC_F13/code/EdgeDetection/io_utils.vhd {2 {vcom -work work -2002 -explicit C:/IHAK/ETDSPC_F13/code/EdgeDetection/io_utils.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Compiling package io_utils
+-- Compiling package body io_utils
+-- Loading package io_utils
+-- Compiling entity test
+-- Loading package io_utils
+-- Compiling architecture hex_test of test
+** Warning: C:/IHAK/ETDSPC_F13/code/EdgeDetection/io_utils.vhd(248): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+
+
+} {} {}} C:/IHAK/ETDSPC_F13/code/EdgeDetection/edge_detection_tb.vhd {1 {vcom -work work -2002 -explicit {C:\IHAK\ETDSPC_F13\code\EdgeDetection\edge_detection_tb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity edge_detection_tb
+-- Compiling architecture bench of edge_detection_tb
+-- Compiling configuration video_sim_cfg
+-- Loading entity edge_detection_tb
+-- Loading architecture bench of edge_detection_tb
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading entity altera_up_avalon_video_edge_detection
+
+} {} {}} C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_nonmaximum_suppression.vhd {1 {vcom -work work -2002 -explicit C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_nonmaximum_suppression.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Compiling entity altera_up_edge_detection_nonmaximum_suppression
+-- Compiling architecture Behaviour of altera_up_edge_detection_nonmaximum_suppression
+
+} {} {}} C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_gaussian_smoothing_filter.vhd {1 {vcom -work work -2002 -explicit C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_gaussian_smoothing_filter.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Compiling entity altera_up_edge_detection_gaussian_smoothing_filter
+-- Compiling architecture Behaviour of altera_up_edge_detection_gaussian_smoothing_filter
+
+} {} {}} C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_hysteresis.vhd {1 {vcom -work work -2002 -explicit C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_hysteresis.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Compiling entity altera_up_edge_detection_hysteresis
+-- Compiling architecture Behaviour of altera_up_edge_detection_hysteresis
+
+} {} {}} C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_data_shift_register.vhd {1 {vcom -work work -2002 -explicit C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_data_shift_register.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity altera_up_edge_detection_data_shift_register
+-- Compiling architecture SYN of altera_up_edge_detection_data_shift_register
+
+} {} {}} C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_avalon_video_edge_detection.vhd {1 {vcom -work work -2002 -explicit C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_avalon_video_edge_detection.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Compiling entity altera_up_avalon_video_edge_detection
+-- Compiling architecture Behaviour of altera_up_avalon_video_edge_detection
+
+} {} {}} C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_sobel_operator.vhd {1 {vcom -work work -2002 -explicit C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_sobel_operator.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Compiling entity altera_up_edge_detection_sobel_operator
+-- Compiling architecture Behaviour of altera_up_edge_detection_sobel_operator
+
+} {} {}} C:/IHAK/ETDSPC_F13/code/EdgeDetection/edge_detection_file_tb.vhd {1 {vcom -work work -2002 -explicit C:/IHAK/ETDSPC_F13/code/EdgeDetection/edge_detection_file_tb.vhd
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package io_utils
+-- Compiling entity edge_detection_file_tb
+-- Compiling architecture bench of edge_detection_file_tb
+-- Compiling configuration video_file_sim_cfg
+-- Loading entity edge_detection_file_tb
+-- Loading architecture bench of edge_detection_file_tb
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading entity altera_up_avalon_video_edge_detection
+
+} {} {}}

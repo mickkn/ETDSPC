@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Feb 06 22:08:52 2013
+Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : EdgeFilter
+Top-level Entity Name : altera_up_edge_detection_gaussian_smoothing_filter
+Family : Cyclone II
+Total logic elements : 567
+    Total combinational functions : 567
+    Dedicated logic registers : 539
+Total registers : 539
+Total pins : 20
+Total virtual pins : 0
+Total memory bits : 17,864
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

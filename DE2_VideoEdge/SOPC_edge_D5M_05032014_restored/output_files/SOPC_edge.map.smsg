@@ -1,0 +1,13 @@
+Warning (10273): Verilog HDL warning at SOPC_Video_lcd.v(61): extended using "x" or "z"
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(955): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(957): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(1001): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(1003): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(2029): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(2031): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(2187): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(3106): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_sdram_0.v(316): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_sdram_0.v(326): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_sdram_0.v(336): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_sdram_0.v(680): conditional expression evaluates to a constant

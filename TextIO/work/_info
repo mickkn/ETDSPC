@@ -1,0 +1,46 @@
+m255
+K3
+13
+cModel Technology
+dC:\ETDSPC\AV2
+Epixel_scan
+Z0 w1457962842
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z3 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dY:\Desktop\ETDSPC\TextIO
+Z7 8Y:/Desktop/ETDSPC/TextIO/pixel_scan.vhd
+Z8 FY:/Desktop/ETDSPC/TextIO/pixel_scan.vhd
+l0
+L7
+V4`c601R=R_kTSB:P9kC3C0
+!s100 HYUG_G<HV40S60C^zQ:gm1
+Z9 OV;C;10.1d;51
+32
+!i10b 1
+Z10 !s108 1457962846.370000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/Desktop/ETDSPC/TextIO/pixel_scan.vhd|
+Z12 !s107 Y:/Desktop/ETDSPC/TextIO/pixel_scan.vhd|
+Z13 o-work work -2002 -explicit -O0
+Z14 tExplicit 1
+Abeh
+R1
+R2
+R3
+R4
+R5
+Z15 DEx4 work 10 pixel_scan 0 22 4`c601R=R_kTSB:P9kC3C0
+l18
+L12
+VGOM:BV032KWYLSmm>A2OL2
+!s100 Zago^D;BQmmQO>]478=HW2
+R9
+32
+!i10b 1
+R10
+R11
+R12
+R13
+R14

@@ -1,0 +1,493 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\IHAK\ETDSPC_F13\code\EdgeDetection
+Ealtera_up_avalon_video_edge_detection
+Z1 w1368018999
+Z2 DPx8 synopsys 10 attributes 0 22 J^T`lPA_8_J<l8kQiVE]>2
+Z3 DPx4 ieee 14 std_logic_misc 0 22 >dU:RInm^_6_mBJ^<6QGY2
+Z4 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z5 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z8 dC:\IHAK\ETDSPC_F13\code\EdgeDetection
+Z9 8C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_avalon_video_edge_detection.vhd
+Z10 FC:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_avalon_video_edge_detection.vhd
+l0
+L53
+V6eWMTCoQ;Bcg`QOJPoUYU3
+Z11 OV;C;10.1b;51
+32
+Z12 !s108 1369640451.477000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_avalon_video_edge_detection.vhd|
+Z14 !s107 C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_avalon_video_edge_detection.vhd|
+Z15 o-work work -2002 -explicit -O0
+Z16 tExplicit 1
+!s100 Hb87BA<n@8a]=<k4i`hKM2
+!i10b 1
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+R7
+Z17 DEx4 work 37 altera_up_avalon_video_edge_detection 0 22 6eWMTCoQ;Bcg`QOJPoUYU3
+l226
+L96
+VkV9ZHc9d@N`G0hFimib:<3
+R11
+32
+R12
+R13
+R14
+R15
+R16
+!s100 >8c9K[d0Nn1>iM_gG:oPf1
+!i10b 1
+Ealtera_up_edge_detection_data_shift_register
+Z18 w1361288432
+R6
+R7
+R8
+Z19 8C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_data_shift_register.vhd
+Z20 FC:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_data_shift_register.vhd
+l0
+L7
+Va_l8FSM`WiihoZScdInQd1
+R11
+32
+Z21 !s108 1369640452.067000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_data_shift_register.vhd|
+Z23 !s107 C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_data_shift_register.vhd|
+R15
+R16
+!s100 SjfEiZE[BA0Gz[6i0G9@j1
+!i10b 1
+Asyn
+R6
+R7
+DEx4 work 44 altera_up_edge_detection_data_shift_register 0 22 a_l8FSM`WiihoZScdInQd1
+l46
+L23
+Ve>o4eEB:fN3A7j:]8M[Ch1
+R11
+32
+R21
+R22
+R23
+R15
+R16
+!s100 eX6KViGU?LWjB?VWeolTH2
+!i10b 1
+Ealtera_up_edge_detection_gaussian_smoothing_filter
+Z24 w1360188516
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z25 8C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_gaussian_smoothing_filter.vhd
+Z26 FC:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_gaussian_smoothing_filter.vhd
+l0
+L47
+V8z=zN^Yd>Xce92mAQL8N72
+R11
+32
+Z27 !s108 1369640451.577000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_gaussian_smoothing_filter.vhd|
+Z29 !s107 C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_gaussian_smoothing_filter.vhd|
+R15
+R16
+!s100 SE59iSEAojZl1VCG:^Y@U0
+!i10b 1
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 50 altera_up_edge_detection_gaussian_smoothing_filter 0 22 8z=zN^Yd>Xce92mAQL8N72
+l138
+L78
+Vk2JX]nGDmnTJ8gdmHRS_`0
+R11
+32
+R27
+R28
+R29
+R15
+R16
+!s100 J7@VLAOE>Q<42:YN@LhUa1
+!i10b 1
+Ealtera_up_edge_detection_hysteresis
+Z30 w1360188978
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z31 8C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_hysteresis.vhd
+Z32 FC:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_hysteresis.vhd
+l0
+L47
+VG=2bW`mWk:h4WL=f`@0W=1
+R11
+32
+Z33 !s108 1369640451.667000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_hysteresis.vhd|
+Z35 !s107 C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_hysteresis.vhd|
+R15
+R16
+!s100 kP<gm<41X_W^LCcF:[mQT0
+!i10b 1
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 35 altera_up_edge_detection_hysteresis 0 22 G=2bW`mWk:h4WL=f`@0W=1
+l132
+L78
+VMJS2B_AGegNC^YjHYGISR0
+R11
+32
+R33
+R34
+R35
+R15
+R16
+!s100 SRK[Z@fLKNag:eP?95kQQ0
+!i10b 1
+Ealtera_up_edge_detection_nonmaximum_suppression
+Z36 w1359842627
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z37 8C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_nonmaximum_suppression.vhd
+Z38 FC:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_nonmaximum_suppression.vhd
+l0
+L46
+V23:bG4g0DI=f3>03Vblc42
+R11
+32
+Z39 !s108 1369640451.767000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_nonmaximum_suppression.vhd|
+Z41 !s107 C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_nonmaximum_suppression.vhd|
+R15
+R16
+!s100 6@UFUlO09foN;hK6V_o;?3
+!i10b 1
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 47 altera_up_edge_detection_nonmaximum_suppression 0 22 23:bG4g0DI=f3>03Vblc42
+l131
+L77
+VPM4EWaM^Oz]23U1^L>MKc0
+R11
+32
+R39
+R40
+R41
+R15
+R16
+!s100 ejNI5T2dm19o=fAPe_b032
+!i10b 1
+Ealtera_up_edge_detection_pixel_info_shift_register
+Z42 w1361288754
+R6
+R7
+R8
+Z43 8C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_pixel_info_shift_register.vhd
+Z44 FC:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_pixel_info_shift_register.vhd
+l0
+L42
+V4O^mJB93F6PO@84NBHSfl3
+R11
+32
+Z45 !s108 1369640454.127000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_pixel_info_shift_register.vhd|
+Z47 !s107 C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_pixel_info_shift_register.vhd|
+R15
+R16
+!s100 MbDYRSW>cD^VflV>^1[fh1
+!i10b 1
+Asyn
+R6
+R7
+DEx4 work 50 altera_up_edge_detection_pixel_info_shift_register 0 22 4O^mJB93F6PO@84NBHSfl3
+l80
+L57
+VBN9lgW1OH@RPXQjg^zWT<2
+R11
+32
+R45
+R46
+R47
+R15
+R16
+!s100 a903dW3YHi_[CZP7Ea><f2
+!i10b 1
+Ealtera_up_edge_detection_sobel_operator
+Z48 w1360188872
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z49 8C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_sobel_operator.vhd
+Z50 FC:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_sobel_operator.vhd
+l0
+L47
+VY^D3bLmiWXBXAL>ogejG_1
+R11
+32
+Z51 !s108 1369640451.867000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_sobel_operator.vhd|
+Z53 !s107 C:/IHAK/ETDSPC_F13/code/EdgeDetection/altera_up_edge_detection_sobel_operator.vhd|
+R15
+R16
+!s100 ng7d9_j`z3NHb93h9`co71
+!i10b 1
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 39 altera_up_edge_detection_sobel_operator 0 22 Y^D3bLmiWXBXAL>ogejG_1
+l144
+L78
+V=MQMUL9nKdH0]QhGP;CZo0
+R11
+32
+R51
+R52
+R53
+R15
+R16
+!s100 RDbJ>AYo3i`YRR<8B63DD2
+!i10b 1
+Eedge_detection_file_tb
+Z54 w1369640448
+Z55 DPx4 work 8 io_utils 0 22 ^W?iTi9>>[TI2oW@a^KE00
+Z56 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R6
+R7
+R8
+Z57 8C:/IHAK/ETDSPC_F13/code/EdgeDetection/edge_detection_file_tb.vhd
+Z58 FC:/IHAK/ETDSPC_F13/code/EdgeDetection/edge_detection_file_tb.vhd
+l0
+L7
+VNd>:=Cg?2gBSYOOPT6?n00
+R11
+32
+Z59 !s108 1369640454.207000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/IHAK/ETDSPC_F13/code/EdgeDetection/edge_detection_file_tb.vhd|
+Z61 !s107 C:/IHAK/ETDSPC_F13/code/EdgeDetection/edge_detection_file_tb.vhd|
+R15
+R16
+!s100 Y_JBJjak=5aHDO4KNM>zj3
+!i10b 1
+Abench
+R55
+R56
+R6
+R7
+Z62 DEx4 work 22 edge_detection_file_tb 0 22 Nd>:=Cg?2gBSYOOPT6?n00
+l70
+L19
+VXPPlL1hSM?aUKCJ::5nG_3
+R11
+32
+R59
+R60
+R61
+R15
+R16
+!s100 VZRA10Zd:dcOL5;gd1[]z1
+!i10b 1
+Eedge_detection_tb
+Z63 w1369640410
+R56
+R6
+R7
+R8
+Z64 8C:\IHAK\ETDSPC_F13\code\EdgeDetection\edge_detection_tb.vhd
+Z65 FC:\IHAK\ETDSPC_F13\code\EdgeDetection\edge_detection_tb.vhd
+l0
+L5
+VXlz^7ML@MkO]T=Wbf6N3]0
+R11
+32
+Z66 !s108 1369640451.957000
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\IHAK\ETDSPC_F13\code\EdgeDetection\edge_detection_tb.vhd|
+Z68 !s107 C:\IHAK\ETDSPC_F13\code\EdgeDetection\edge_detection_tb.vhd|
+R15
+R16
+!s100 c9O98Q>bMM`GA=3mU7N[I3
+!i10b 1
+Abench
+R56
+R6
+R7
+Z69 DEx4 work 17 edge_detection_tb 0 22 Xlz^7ML@MkO]T=Wbf6N3]0
+l63
+L13
+VNmZz12JQ7j0Oj[AozaIDz0
+R11
+32
+R66
+R67
+R68
+R15
+R16
+!s100 WI=kG;GAGEAG0g;iJmd2k2
+!i10b 1
+Pio_utils
+R6
+Z70 w1294771944
+R8
+Z71 8C:/IHAK/ETDSPC_F13/code/EdgeDetection/io_utils.vhd
+Z72 FC:/IHAK/ETDSPC_F13/code/EdgeDetection/io_utils.vhd
+l0
+L11
+V^W?iTi9>>[TI2oW@a^KE00
+!s100 Md1Yf06lEaGKHe`L^U8E60
+R11
+32
+b1
+!i10b 1
+Z73 !s108 1369640454.307000
+Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/IHAK/ETDSPC_F13/code/EdgeDetection/io_utils.vhd|
+Z75 !s107 C:/IHAK/ETDSPC_F13/code/EdgeDetection/io_utils.vhd|
+R15
+R16
+Bbody
+R55
+R6
+l0
+L42
+Z76 V>?A<54:gBFc^h0LSfQEWL2
+Z77 !s100 SQYgfCY6CHP2dQRV1Bhak0
+R11
+32
+!i10b 1
+R73
+R74
+R75
+R15
+R16
+nbody
+Etest
+R70
+R8
+R71
+R72
+l0
+L240
+VGi@Ucjfao8bUiQbc:8SY02
+!s100 9j[5YTLj@J[cLCJa>9_Ue2
+R11
+32
+!i10b 1
+R73
+R74
+R75
+R15
+R16
+Ahex_test
+Z78 DEx4 work 4 test 0 22 Gi@Ucjfao8bUiQbc:8SY02
+R55
+R6
+l245
+L244
+Z79 V`<2<Yo4e1JbD7k?8;>V2<1
+Z80 !s100 lHFKZ9hdiKc[WHSP1J@1@0
+R11
+32
+!i10b 1
+R73
+R74
+R75
+R15
+R16
+Cvideo_file_sim_cfg
+Z81 abench
+eedge_detection_file_tb
+R2
+R3
+R4
+R5
+R17
+DAx4 work 22 edge_detection_file_tb 5 bench 22 XPPlL1hSM?aUKCJ::5nG_3
+R55
+R56
+R6
+R7
+R62
+R54
+R8
+R57
+R58
+l0
+L208
+VkP`KoBG6<GC9=C5cNL4Ym0
+R11
+32
+R59
+R60
+R61
+R15
+R16
+!s100 T:`[>11DP83TV188Uo[C63
+!i10b 1
+Cvideo_sim_cfg
+R81
+eedge_detection_tb
+R2
+R3
+R4
+R5
+R17
+DAx4 work 17 edge_detection_tb 5 bench 22 NmZz12JQ7j0Oj[AozaIDz0
+R56
+R6
+R7
+R69
+R63
+R8
+R64
+R65
+l0
+L164
+Ve092k?;`P2UDBIJUAAXaF2
+R11
+32
+R66
+R67
+R68
+R15
+R16
+!s100 ;okS>zc3JSeDF7@]dPPPD0
+!i10b 1
