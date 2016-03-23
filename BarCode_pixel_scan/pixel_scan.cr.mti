@@ -1,0 +1,31 @@
+Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan_tb.vhd {1 {vcom -work work -2002 -explicit Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan_tb.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_textio
+-- Loading package NUMERIC_STD
+-- Loading package sim_avalon
+-- Compiling entity pixel_scan_tb
+-- Compiling architecture bench of pixel_scan_tb
+
+} {} {}} Y:/Desktop/ETDSPC/BarCode_pixel_scan/sim_avalon.vhd {1 {vcom -work work -2002 -explicit Y:/Desktop/ETDSPC/BarCode_pixel_scan/sim_avalon.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package sim_avalon
+-- Compiling package body sim_avalon
+-- Loading package sim_avalon
+
+} {} {}} Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan.vhd {1 {vcom -work work -2002 -explicit Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity pixel_scan
+-- Compiling architecture beh of pixel_scan
+
+} {} {}}

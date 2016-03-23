@@ -1,0 +1,1551 @@
+Analysis & Synthesis report for SOPC_edge
+Tue Mar 22 15:10:52 2016
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis IP Cores Summary
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Tue Mar 22 15:10:52 2016               ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; SOPC_edge                                       ;
+; Top-level Entity Name              ; Video_Edge_Detection                            ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                          ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+; Option                                                                     ; Setting              ; Default Value      ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6         ;                    ;
+; Top-level entity name                                                      ; Video_Edge_Detection ; SOPC_edge          ;
+; Family name                                                                ; Cyclone II           ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                  ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                   ; On                 ;
+; Enable compact report table                                                ; Off                  ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                 ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                  ; Off                ;
+; Preserve fewer node names                                                  ; On                   ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                  ; Off                ;
+; Verilog Version                                                            ; Verilog_2001         ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993            ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                 ; Auto               ;
+; Safe State Machine                                                         ; Off                  ; Off                ;
+; Extract Verilog State Machines                                             ; On                   ; On                 ;
+; Extract VHDL State Machines                                                ; On                   ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                  ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                 ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                  ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                   ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                   ; On                 ;
+; Parallel Synthesis                                                         ; On                   ; On                 ;
+; DSP Block Balancing                                                        ; Auto                 ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                   ; On                 ;
+; Power-Up Don't Care                                                        ; On                   ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                  ; Off                ;
+; Remove Duplicate Registers                                                 ; On                   ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                  ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                  ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                  ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                  ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                  ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                   ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                  ; Off                ;
+; Optimization Technique                                                     ; Balanced             ; Balanced           ;
+; Carry Chain Length                                                         ; 70                   ; 70                 ;
+; Auto Carry Chains                                                          ; On                   ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                   ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                  ; Off                ;
+; Auto ROM Replacement                                                       ; On                   ; On                 ;
+; Auto RAM Replacement                                                       ; On                   ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto                 ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                 ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                   ; On                 ;
+; Strict RAM Replacement                                                     ; Off                  ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                   ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                  ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                  ; Off                ;
+; Auto Resource Sharing                                                      ; Off                  ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                  ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                  ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                  ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                   ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                  ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                  ; Off                ;
+; Report Parameter Settings                                                  ; On                   ; On                 ;
+; Report Source Assignments                                                  ; On                   ; On                 ;
+; Report Connectivity Checks                                                 ; On                   ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                  ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                    ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation   ; Normal compilation ;
+; HDL message level                                                          ; Level2               ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                  ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                 ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                 ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                  ; 100                ;
+; Clock MUX Protection                                                       ; On                   ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                  ; Off                ;
+; Block Design Naming                                                        ; Auto                 ; Auto               ;
+; SDC constraint protection                                                  ; Off                  ; Off                ;
+; Synthesis Effort                                                           ; Auto                 ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                   ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                  ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium               ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                 ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                   ; On                 ;
+; Synthesis Seed                                                             ; 1                    ; 1                  ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                                                                                       ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                             ; IP Include File                                                                                               ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+; Altera ; RAM: 2-PORT  ; N/A     ; N/A          ; N/A          ; |Video_Edge_Detection|SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Buffer:data_line|Altera_UP_SD_Card_Memory_Block:packet_memory ; Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/db/ip/SOPC_Video/submodules/Altera_UP_SD_Card_Memory_Block.vhd ;
+; Altera ; LPM_FIFO+    ; N/A     ; N/A          ; N/A          ; |Video_Edge_Detection|SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO                                                                                            ; Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/db/ip/SOPC_Video/submodules/altera_up_video_dual_clock_fifo.v  ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Mar 22 15:09:44 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SOPC_edge -c SOPC_edge
+Info (20029): Only one processor detected - disabling parallel compilation
+Info (12248): Elaborating Qsys system entity "SOPC_Video.qsys"
+Info (12250): 2016.03.22.15:09:49 Progress: Loading SOPC_edge/SOPC_Video.qsys
+Info (12250): 2016.03.22.15:09:50 Progress: Reading input file
+Info (12250): 2016.03.22.15:09:50 Progress: Adding clk_0 [clock_source 13.0]
+Info (12250): 2016.03.22.15:09:50 Progress: Parameterizing module clk_0
+Info (12250): 2016.03.22.15:09:50 Progress: Adding Onchip_Memory [altera_avalon_onchip_memory2 13.0.1.99.2]
+Info (12250): 2016.03.22.15:09:50 Progress: Parameterizing module Onchip_Memory
+Info (12250): 2016.03.22.15:09:50 Progress: Adding Dual_Clock_FIFO [altera_up_avalon_video_dual_clock_buffer 13.0]
+Info (12250): 2016.03.22.15:09:51 Progress: Parameterizing module Dual_Clock_FIFO
+Info (12250): 2016.03.22.15:09:51 Progress: Adding Pixel_Buffer [altera_up_avalon_sram 13.0]
+Info (12250): 2016.03.22.15:09:51 Progress: Parameterizing module Pixel_Buffer
+Info (12250): 2016.03.22.15:09:51 Progress: Adding Pixel_Buffer_DMA [altera_up_avalon_video_pixel_buffer_dma 13.0]
+Info (12250): 2016.03.22.15:09:51 Progress: Parameterizing module Pixel_Buffer_DMA
+Info (12250): 2016.03.22.15:09:51 Progress: Adding Pixel_RGB_Resampler [altera_up_avalon_video_rgb_resampler 13.0]
+Info (12250): 2016.03.22.15:09:51 Progress: Parameterizing module Pixel_RGB_Resampler
+Info (12250): 2016.03.22.15:09:51 Progress: Adding Pixel_Scaler [altera_up_avalon_video_scaler 13.0]
+Info (12250): 2016.03.22.15:09:51 Progress: Parameterizing module Pixel_Scaler
+Info (12250): 2016.03.22.15:09:51 Progress: Adding VGA_Controller [altera_up_avalon_video_vga_controller 13.0]
+Info (12250): 2016.03.22.15:09:51 Progress: Parameterizing module VGA_Controller
+Info (12250): 2016.03.22.15:09:51 Progress: Adding Video_In_Decoder [altera_up_avalon_video_decoder 13.0]
+Info (12250): 2016.03.22.15:09:51 Progress: Parameterizing module Video_In_Decoder
+Info (12250): 2016.03.22.15:09:51 Progress: Adding Video_Clipper [altera_up_avalon_video_clipper 13.0]
+Info (12250): 2016.03.22.15:09:51 Progress: Parameterizing module Video_Clipper
+Info (12250): 2016.03.22.15:09:51 Progress: Adding Video_DMA [altera_up_avalon_video_dma_controller 13.0]
+Info (12250): 2016.03.22.15:09:52 Progress: Parameterizing module Video_DMA
+Info (12250): 2016.03.22.15:09:52 Progress: Adding AV_Config [altera_up_avalon_audio_and_video_config 13.0]
+Info (12250): 2016.03.22.15:09:52 Progress: Parameterizing module AV_Config
+Info (12250): 2016.03.22.15:09:52 Progress: Adding Edge_Detection [altera_up_avalon_video_edge_detection 13.0]
+Info (12250): 2016.03.22.15:09:52 Progress: Parameterizing module Edge_Detection
+Info (12250): 2016.03.22.15:09:52 Progress: Adding CPU [altera_nios2_qsys 13.0]
+Info (12250): 2016.03.22.15:09:52 Progress: Parameterizing module CPU
+Info (12250): 2016.03.22.15:09:52 Progress: Adding Clock_Signals [altera_up_clocks 13.0]
+Info (12250): 2016.03.22.15:09:52 Progress: Parameterizing module Clock_Signals
+Info (12250): 2016.03.22.15:09:52 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module jtag_uart_0
+Info (12250): 2016.03.22.15:09:53 Progress: Adding clk_vga [clock_source 13.0]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module clk_vga
+Info (12250): 2016.03.22.15:09:53 Progress: Adding video_bayer_resampler [altera_up_avalon_video_bayer_resampler 13.0]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module video_bayer_resampler
+Info (12250): 2016.03.22.15:09:53 Progress: Adding video_clipper_0 [altera_up_avalon_video_clipper 13.0]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module video_clipper_0
+Info (12250): 2016.03.22.15:09:53 Progress: Adding video_scaler_0 [altera_up_avalon_video_scaler 13.0]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module video_scaler_0
+Info (12250): 2016.03.22.15:09:53 Progress: Adding video_rgb_resampler_0 [altera_up_avalon_video_rgb_resampler 13.0]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module video_rgb_resampler_0
+Info (12250): 2016.03.22.15:09:53 Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 13.0]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module sysid_qsys_0
+Info (12250): 2016.03.22.15:09:53 Progress: Adding sdram_0 [altera_avalon_new_sdram_controller 13.0.1.99.2]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module sdram_0
+Info (12250): 2016.03.22.15:09:53 Progress: Adding timer_system [altera_avalon_timer 13.0.1.99.2]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module timer_system
+Info (12250): 2016.03.22.15:09:53 Progress: Adding timer_timestamp [altera_avalon_timer 13.0.1.99.2]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module timer_timestamp
+Info (12250): 2016.03.22.15:09:53 Progress: Adding lcd [altera_avalon_lcd_16207 13.0.1.99.2]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module lcd
+Info (12250): 2016.03.22.15:09:53 Progress: Adding red_leds [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module red_leds
+Info (12250): 2016.03.22.15:09:53 Progress: Adding green_leds [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module green_leds
+Info (12250): 2016.03.22.15:09:53 Progress: Adding switch [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module switch
+Info (12250): 2016.03.22.15:09:53 Progress: Adding nios_custom_instr_floating_point_0 [altera_nios_custom_instr_floating_point 13.0]
+Info (12250): 2016.03.22.15:09:53 Progress: Parameterizing module nios_custom_instr_floating_point_0
+Info (12250): 2016.03.22.15:09:53 Progress: Adding Altera_UP_SD_Card_Avalon_Interface_0 [Altera_UP_SD_Card_Avalon_Interface 13.0]
+Info (12250): 2016.03.22.15:09:58 Progress: Parameterizing module Altera_UP_SD_Card_Avalon_Interface_0
+Info (12250): 2016.03.22.15:09:58 Progress: Adding SobleEdge_0 [SobleEdge 1.0]
+Info (12250): 2016.03.22.15:09:58 Progress: Parameterizing module SobleEdge_0
+Info (12250): 2016.03.22.15:09:58 Progress: Adding Barcode_scan_0 [Barcode_scan 1.0]
+Info (12250): 2016.03.22.15:09:58 Progress: Parameterizing module Barcode_scan_0
+Info (12250): 2016.03.22.15:09:58 Progress: Building connections
+Info (12250): 2016.03.22.15:09:59 Progress: Parameterizing connections
+Info (12250): 2016.03.22.15:09:59 Progress: Validating
+Info (12250): 2016.03.22.15:09:59 Progress: Done reading input file
+Info (12250): SOPC_Video.Pixel_RGB_Resampler: RGB Resampling: 8 (bits) x 1 (planes) -> 10 (bits) x 3 (planes)
+Info (12250): SOPC_Video.VGA_Controller: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes)
+Info (12250): SOPC_Video.Video_In_Decoder: Video In Stream: Format: 2592 x 1944 (default) with Colour: 8 (bits) x 1 (planes) (RGB Bayer Pattern)
+Info (12250): SOPC_Video.CPU: CPUID control register value is 0. Please manually assign CPUID if creating multiple Nios II system
+Info (12250): SOPC_Video.video_bayer_resampler: Change in Resolution: 2592 x 1944 -> 1296 x 972
+Info (12250): SOPC_Video.video_clipper_0: Change in Resolution: 1296 x 972 -> 1280 x 960
+Info (12250): SOPC_Video.video_scaler_0: Change in Resolution: 1280 x 960 -> 640 x 480
+Info (12250): SOPC_Video.video_rgb_resampler_0: RGB Resampling: 8 (bits) x 3 (planes) -> 8 (bits) x 1 (planes)
+Info (12250): SOPC_Video.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info (12250): SOPC_Video.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info (12250): SOPC_Video.switch: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): SOPC_Video: Generating SOPC_Video "SOPC_Video" for QUARTUS_SYNTH
+Info (12250): Pipeline_bridge_swap_transform: After transform: 29 modules, 179 connections
+Info (12250): Merlin_custom_instruction_transform: After transform: 32 modules, 182 connections
+Info (12250): Merlin_translator_transform: After transform: 53 modules, 308 connections
+Info (12250): Merlin_domain_transform: After transform: 94 modules, 707 connections
+Info (12250): Merlin_router_transform: After transform: 115 modules, 833 connections
+Info (12250): Merlin_burst_transform: After transform: 118 modules, 851 connections
+Info (12250): Reset_adaptation_transform: After transform: 122 modules, 465 connections
+Info (12250): Merlin_network_to_switch_transform: After transform: 163 modules, 551 connections
+Info (12250): Merlin_width_transform: After transform: 175 modules, 587 connections
+Info (12250): Merlin_mm_transform: After transform: 175 modules, 587 connections
+Info (12250): Merlin_interrupt_mapper_transform: After transform: 176 modules, 590 connections
+Warning (12251): SOPC_Video: "No matching role found for CPU_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning (12251): SOPC_Video: "No matching role found for CPU_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): SOPC_Video: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Info (12250): Onchip_Memory: Starting RTL generation for module 'SOPC_Video_Onchip_Memory'
+Info (12250): Onchip_Memory:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=SOPC_Video_Onchip_Memory --dir=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0003_Onchip_Memory_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0003_Onchip_Memory_gen//SOPC_Video_Onchip_Memory_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Onchip_Memory: Done RTL generation for module 'SOPC_Video_Onchip_Memory'
+Info (12250): Onchip_Memory: "SOPC_Video" instantiated altera_avalon_onchip_memory2 "Onchip_Memory"
+Info (12250): Dual_Clock_FIFO: Starting Generation of the Dual Clock Buffer
+Info (12250): Dual_Clock_FIFO: "SOPC_Video" instantiated altera_up_avalon_video_dual_clock_buffer "Dual_Clock_FIFO"
+Info (12250): Pixel_Buffer: Starting Generation of SRAM or SSRAM Controller
+Info (12250): Pixel_Buffer: "SOPC_Video" instantiated altera_up_avalon_sram "Pixel_Buffer"
+Info (12250): Pixel_Buffer_DMA: Starting Generation of VGA Pixel Buffer
+Info (12250): Pixel_Buffer_DMA: "SOPC_Video" instantiated altera_up_avalon_video_pixel_buffer_dma "Pixel_Buffer_DMA"
+Info (12250): Pixel_RGB_Resampler: Starting Generation of Video RGB Resampler
+Info (12250): Pixel_RGB_Resampler: "SOPC_Video" instantiated altera_up_avalon_video_rgb_resampler "Pixel_RGB_Resampler"
+Info (12250): VGA_Controller: Starting Generation of VGA Controller
+Info (12250): VGA_Controller: "SOPC_Video" instantiated altera_up_avalon_video_vga_controller "VGA_Controller"
+Info (12250): Video_In_Decoder: Starting Generation of Video In Decoder
+Info (12250): Video_In_Decoder: "SOPC_Video" instantiated altera_up_avalon_video_decoder "Video_In_Decoder"
+Info (12250): Video_DMA: Starting Generation of Video DMA Controller
+Info (12250): Video_DMA: "SOPC_Video" instantiated altera_up_avalon_video_dma_controller "Video_DMA"
+Info (12250): AV_Config: Starting Generation of Audio and Video Config
+Info (12250): AV_Config: "SOPC_Video" instantiated altera_up_avalon_audio_and_video_config "AV_Config"
+Info (12250): CPU: Starting RTL generation for module 'SOPC_Video_CPU'
+Info (12250): CPU:   Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=SOPC_Video_CPU --dir=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0012_CPU_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0012_CPU_gen//SOPC_Video_CPU_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info (12250): CPU: # 2016.03.22 15:10:12 (*) Starting Nios II generation
+Info (12250): CPU: # 2016.03.22 15:10:12 (*)   Checking for plaintext license.
+Info (12250): CPU: # 2016.03.22 15:10:13 (*)   Plaintext license not found.
+Info (12250): CPU: # 2016.03.22 15:10:13 (*)   No license required to generate encrypted Nios II/e.
+Info (12250): CPU: # 2016.03.22 15:10:13 (*)   Elaborating CPU configuration settings
+Info (12250): CPU: # 2016.03.22 15:10:13 (*)   Creating all objects for CPU
+Info (12250): CPU: # 2016.03.22 15:10:14 (*)   Generating RTL from CPU objects
+Info (12250): CPU: # 2016.03.22 15:10:14 (*)   Creating plain-text RTL
+Info (12250): CPU: # 2016.03.22 15:10:18 (*) Done Nios II generation
+Info (12250): CPU: Done RTL generation for module 'SOPC_Video_CPU'
+Info (12250): CPU: "SOPC_Video" instantiated altera_nios2_qsys "CPU"
+Info (12250): Clock_Signals: Starting Generation of Required Clocks for DE-Series Boards
+Info (12250): Clock_Signals: "SOPC_Video" instantiated altera_up_clocks "Clock_Signals"
+Info (12250): Jtag_uart_0: Starting RTL generation for module 'SOPC_Video_jtag_uart_0'
+Info (12250): Jtag_uart_0:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=SOPC_Video_jtag_uart_0 --dir=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0014_jtag_uart_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0014_jtag_uart_0_gen//SOPC_Video_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Jtag_uart_0: Done RTL generation for module 'SOPC_Video_jtag_uart_0'
+Info (12250): Jtag_uart_0: "SOPC_Video" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info (12250): Video_bayer_resampler: Starting Generation of Video Bayer Pattern Resampler
+Info (12250): Video_bayer_resampler: "SOPC_Video" instantiated altera_up_avalon_video_bayer_resampler "video_bayer_resampler"
+Info (12250): Video_clipper_0: Starting generation of the video clipper
+Info (12250): Video_clipper_0: "SOPC_Video" instantiated altera_up_avalon_video_clipper "video_clipper_0"
+Info (12250): Video_scaler_0: Starting Generation of Video Scaler
+Info (12250): Video_scaler_0: "SOPC_Video" instantiated altera_up_avalon_video_scaler "video_scaler_0"
+Info (12250): Video_rgb_resampler_0: Starting Generation of Video RGB Resampler
+Info (12250): Video_rgb_resampler_0: "SOPC_Video" instantiated altera_up_avalon_video_rgb_resampler "video_rgb_resampler_0"
+Info (12250): Sysid_qsys_0: "SOPC_Video" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info (12250): Sdram_0: Starting RTL generation for module 'SOPC_Video_sdram_0'
+Info (12250): Sdram_0:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=SOPC_Video_sdram_0 --dir=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0020_sdram_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0020_sdram_0_gen//SOPC_Video_sdram_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Sdram_0: Done RTL generation for module 'SOPC_Video_sdram_0'
+Info (12250): Sdram_0: "SOPC_Video" instantiated altera_avalon_new_sdram_controller "sdram_0"
+Info (12250): Timer_system: Starting RTL generation for module 'SOPC_Video_timer_system'
+Info (12250): Timer_system:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=SOPC_Video_timer_system --dir=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0021_timer_system_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0021_timer_system_gen//SOPC_Video_timer_system_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Timer_system: Done RTL generation for module 'SOPC_Video_timer_system'
+Info (12250): Timer_system: "SOPC_Video" instantiated altera_avalon_timer "timer_system"
+Info (12250): Lcd: Starting RTL generation for module 'SOPC_Video_lcd'
+Info (12250): Lcd:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_lcd_16207 -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_lcd_16207/generate_rtl.pl --name=SOPC_Video_lcd --dir=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0022_lcd_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0022_lcd_gen//SOPC_Video_lcd_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Lcd: Done RTL generation for module 'SOPC_Video_lcd'
+Info (12250): Lcd: "SOPC_Video" instantiated altera_avalon_lcd_16207 "lcd"
+Info (12250): Red_leds: Starting RTL generation for module 'SOPC_Video_red_leds'
+Info (12250): Red_leds:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=SOPC_Video_red_leds --dir=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0023_red_leds_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0023_red_leds_gen//SOPC_Video_red_leds_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Red_leds: Done RTL generation for module 'SOPC_Video_red_leds'
+Info (12250): Red_leds: "SOPC_Video" instantiated altera_avalon_pio "red_leds"
+Info (12250): Switch: Starting RTL generation for module 'SOPC_Video_switch'
+Info (12250): Switch:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=SOPC_Video_switch --dir=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0024_switch_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/MICKKI~1/AppData/Local/Temp/alt6882_7810549997537534960.dir/0024_switch_gen//SOPC_Video_switch_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Switch: Done RTL generation for module 'SOPC_Video_switch'
+Info (12250): Switch: "SOPC_Video" instantiated altera_avalon_pio "switch"
+Info (12250): Nios_custom_instr_floating_point_0: "SOPC_Video" instantiated altera_nios_custom_instr_floating_point "nios_custom_instr_floating_point_0"
+Info (12250): Altera_UP_SD_Card_Avalon_Interface_0: "SOPC_Video" instantiated Altera_UP_SD_Card_Avalon_Interface "Altera_UP_SD_Card_Avalon_Interface_0"
+Info (12250): Barcode_scan_0: "SOPC_Video" instantiated Barcode_scan "Barcode_scan_0"
+Info (12250): CPU_custom_instruction_master_translator: "SOPC_Video" instantiated altera_customins_master_translator "CPU_custom_instruction_master_translator"
+Info (12250): CPU_custom_instruction_master_multi_xconnect: "SOPC_Video" instantiated altera_customins_xconnect "CPU_custom_instruction_master_multi_xconnect"
+Info (12250): CPU_custom_instruction_master_multi_slave_translator0: "SOPC_Video" instantiated altera_customins_slave_translator "CPU_custom_instruction_master_multi_slave_translator0"
+Info (12250): CPU_instruction_master_translator: "SOPC_Video" instantiated altera_merlin_master_translator "CPU_instruction_master_translator"
+Info (12250): CPU_jtag_debug_module_translator: "SOPC_Video" instantiated altera_merlin_slave_translator "CPU_jtag_debug_module_translator"
+Info (12250): CPU_instruction_master_translator_avalon_universal_master_0_agent: "SOPC_Video" instantiated altera_merlin_master_agent "CPU_instruction_master_translator_avalon_universal_master_0_agent"
+Info (12250): CPU_jtag_debug_module_translator_avalon_universal_slave_0_agent: "SOPC_Video" instantiated altera_merlin_slave_agent "CPU_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info (12250): CPU_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "SOPC_Video" instantiated altera_avalon_sc_fifo "CPU_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info (12250): Addr_router: "SOPC_Video" instantiated altera_merlin_router "addr_router"
+Info (12250): Addr_router_001: "SOPC_Video" instantiated altera_merlin_router "addr_router_001"
+Info (12250): Addr_router_002: "SOPC_Video" instantiated altera_merlin_router "addr_router_002"
+Info (12250): Id_router: "SOPC_Video" instantiated altera_merlin_router "id_router"
+Info (12250): Id_router_002: "SOPC_Video" instantiated altera_merlin_router "id_router_002"
+Info (12250): Id_router_003: "SOPC_Video" instantiated altera_merlin_router "id_router_003"
+Info (12250): Id_router_004: "SOPC_Video" instantiated altera_merlin_router "id_router_004"
+Info (12250): Id_router_016: "SOPC_Video" instantiated altera_merlin_router "id_router_016"
+Info (12250): Burst_adapter: "SOPC_Video" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info (12250): Rst_controller: "SOPC_Video" instantiated altera_reset_controller "rst_controller"
+Info (12250): Cmd_xbar_demux: "SOPC_Video" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info (12250): Cmd_xbar_demux_001: "SOPC_Video" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info (12250): Cmd_xbar_demux_002: "SOPC_Video" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_002"
+Info (12250): Cmd_xbar_mux: "SOPC_Video" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info (12250): Cmd_xbar_mux_002: "SOPC_Video" instantiated altera_merlin_multiplexer "cmd_xbar_mux_002"
+Info (12250): Reusing file Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/db/ip/SOPC_Video/submodules/altera_merlin_arbitrator.sv
+Info (12250): Cmd_xbar_mux_003: "SOPC_Video" instantiated altera_merlin_multiplexer "cmd_xbar_mux_003"
+Info (12250): Reusing file Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/db/ip/SOPC_Video/submodules/altera_merlin_arbitrator.sv
+Info (12250): Rsp_xbar_demux: "SOPC_Video" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info (12250): Rsp_xbar_demux_002: "SOPC_Video" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_002"
+Info (12250): Rsp_xbar_demux_003: "SOPC_Video" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_003"
+Info (12250): Rsp_xbar_demux_004: "SOPC_Video" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_004"
+Info (12250): Rsp_xbar_mux: "SOPC_Video" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info (12250): Reusing file Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/db/ip/SOPC_Video/submodules/altera_merlin_arbitrator.sv
+Info (12250): Rsp_xbar_mux_001: "SOPC_Video" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info (12250): Reusing file Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/db/ip/SOPC_Video/submodules/altera_merlin_arbitrator.sv
+Info (12250): Width_adapter: "SOPC_Video" instantiated altera_merlin_width_adapter "width_adapter"
+Info (12250): Reusing file Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/db/ip/SOPC_Video/submodules/altera_merlin_address_alignment.sv
+Info (12250): Reusing file Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/db/ip/SOPC_Video/submodules/altera_merlin_burst_uncompressor.sv
+Info (12250): Irq_mapper: "SOPC_Video" instantiated altera_irq_mapper "irq_mapper"
+Info (12250): SOPC_Video: Done SOPC_Video" with 58 modules, 264 files, 5583811 bytes
+Info (12249): Finished elaborating Qsys system entity "SOPC_Video.qsys"
+Info (12021): Found 2 design units, including 1 entities, in source file video_in_edge.vhd
+    Info (12022): Found design unit 1: Video_Edge_Detection-Video_Edge_Detection_rtl
+    Info (12023): Found entity 1: Video_Edge_Detection
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/sopc_video.v
+    Info (12023): Found entity 1: SOPC_Video
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_crc16_generator.vhd
+    Info (12022): Found design unit 1: Altera_UP_SD_CRC16_Generator-rtl
+    Info (12023): Found entity 1: Altera_UP_SD_CRC16_Generator
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_crc7_generator.vhd
+    Info (12022): Found design unit 1: Altera_UP_SD_CRC7_Generator-rtl
+    Info (12023): Found entity 1: Altera_UP_SD_CRC7_Generator
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_card_48_bit_command_generator.vhd
+    Info (12022): Found design unit 1: Altera_UP_SD_Card_48_bit_Command_Generator-rtl
+    Info (12023): Found entity 1: Altera_UP_SD_Card_48_bit_Command_Generator
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_card_avalon_interface.vhd
+    Info (12022): Found design unit 1: Altera_UP_SD_Card_Avalon_Interface-rtl
+    Info (12023): Found entity 1: Altera_UP_SD_Card_Avalon_Interface
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_card_buffer.vhd
+    Info (12022): Found design unit 1: Altera_UP_SD_Card_Buffer-rtl
+    Info (12023): Found entity 1: Altera_UP_SD_Card_Buffer
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_card_clock.vhd
+    Info (12022): Found design unit 1: Altera_UP_SD_Card_Clock-rtl
+    Info (12023): Found entity 1: Altera_UP_SD_Card_Clock
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_card_control_fsm.vhd
+    Info (12022): Found design unit 1: Altera_UP_SD_Card_Control_FSM-rtl
+    Info (12023): Found entity 1: Altera_UP_SD_Card_Control_FSM
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_card_interface.vhd
+    Info (12022): Found design unit 1: Altera_UP_SD_Card_Interface-rtl
+    Info (12023): Found entity 1: Altera_UP_SD_Card_Interface
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_card_memory_block.vhd
+    Info (12022): Found design unit 1: altera_up_sd_card_memory_block-SYN
+    Info (12023): Found entity 1: Altera_UP_SD_Card_Memory_Block
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_card_response_receiver.vhd
+    Info (12022): Found design unit 1: Altera_UP_SD_Card_Response_Receiver-rtl
+    Info (12023): Found entity 1: Altera_UP_SD_Card_Response_Receiver
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_sd_signal_trigger.vhd
+    Info (12022): Found design unit 1: Altera_UP_SD_Signal_Trigger-rtl
+    Info (12023): Found entity 1: Altera_UP_SD_Signal_Trigger
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_av_config.v
+    Info (12023): Found entity 1: SOPC_Video_AV_Config
+Info (12021): Found 21 design units, including 21 entities, in source file db/ip/sopc_video/submodules/sopc_video_cpu.v
+    Info (12023): Found entity 1: SOPC_Video_CPU_register_bank_a_module
+    Info (12023): Found entity 2: SOPC_Video_CPU_register_bank_b_module
+    Info (12023): Found entity 3: SOPC_Video_CPU_nios2_oci_debug
+    Info (12023): Found entity 4: SOPC_Video_CPU_ociram_sp_ram_module
+    Info (12023): Found entity 5: SOPC_Video_CPU_nios2_ocimem
+    Info (12023): Found entity 6: SOPC_Video_CPU_nios2_avalon_reg
+    Info (12023): Found entity 7: SOPC_Video_CPU_nios2_oci_break
+    Info (12023): Found entity 8: SOPC_Video_CPU_nios2_oci_xbrk
+    Info (12023): Found entity 9: SOPC_Video_CPU_nios2_oci_dbrk
+    Info (12023): Found entity 10: SOPC_Video_CPU_nios2_oci_itrace
+    Info (12023): Found entity 11: SOPC_Video_CPU_nios2_oci_td_mode
+    Info (12023): Found entity 12: SOPC_Video_CPU_nios2_oci_dtrace
+    Info (12023): Found entity 13: SOPC_Video_CPU_nios2_oci_compute_tm_count
+    Info (12023): Found entity 14: SOPC_Video_CPU_nios2_oci_fifowp_inc
+    Info (12023): Found entity 15: SOPC_Video_CPU_nios2_oci_fifocount_inc
+    Info (12023): Found entity 16: SOPC_Video_CPU_nios2_oci_fifo
+    Info (12023): Found entity 17: SOPC_Video_CPU_nios2_oci_pib
+    Info (12023): Found entity 18: SOPC_Video_CPU_nios2_oci_im
+    Info (12023): Found entity 19: SOPC_Video_CPU_nios2_performance_monitors
+    Info (12023): Found entity 20: SOPC_Video_CPU_nios2_oci
+    Info (12023): Found entity 21: SOPC_Video_CPU
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cpu_custom_instruction_master_multi_xconnect.sv
+    Info (12023): Found entity 1: SOPC_Video_CPU_custom_instruction_master_multi_xconnect
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cpu_jtag_debug_module_sysclk.v
+    Info (12023): Found entity 1: SOPC_Video_CPU_jtag_debug_module_sysclk
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cpu_jtag_debug_module_tck.v
+    Info (12023): Found entity 1: SOPC_Video_CPU_jtag_debug_module_tck
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cpu_jtag_debug_module_wrapper.v
+    Info (12023): Found entity 1: SOPC_Video_CPU_jtag_debug_module_wrapper
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cpu_oci_test_bench.v
+    Info (12023): Found entity 1: SOPC_Video_CPU_oci_test_bench
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cpu_test_bench.v
+    Info (12023): Found entity 1: SOPC_Video_CPU_test_bench
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_clock_signals.v
+    Info (12023): Found entity 1: SOPC_Video_Clock_Signals
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_dual_clock_fifo.v
+    Info (12023): Found entity 1: SOPC_Video_Dual_Clock_FIFO
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_onchip_memory.v
+    Info (12023): Found entity 1: SOPC_Video_Onchip_Memory
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_pixel_buffer.v
+    Info (12023): Found entity 1: SOPC_Video_Pixel_Buffer
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_pixel_buffer_dma.v
+    Info (12023): Found entity 1: SOPC_Video_Pixel_Buffer_DMA
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_pixel_rgb_resampler.v
+    Info (12023): Found entity 1: SOPC_Video_Pixel_RGB_Resampler
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_vga_controller.v
+    Info (12023): Found entity 1: SOPC_Video_VGA_Controller
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_video_dma.v
+    Info (12023): Found entity 1: SOPC_Video_Video_DMA
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_video_in_decoder.v
+    Info (12023): Found entity 1: SOPC_Video_Video_In_Decoder
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/sopc_video/submodules/sopc_video_addr_router.sv
+    Info (12023): Found entity 1: SOPC_Video_addr_router_default_decode
+    Info (12023): Found entity 2: SOPC_Video_addr_router
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/sopc_video/submodules/sopc_video_addr_router_001.sv
+    Info (12023): Found entity 1: SOPC_Video_addr_router_001_default_decode
+    Info (12023): Found entity 2: SOPC_Video_addr_router_001
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/sopc_video/submodules/sopc_video_addr_router_002.sv
+    Info (12023): Found entity 1: SOPC_Video_addr_router_002_default_decode
+    Info (12023): Found entity 2: SOPC_Video_addr_router_002
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cmd_xbar_demux.sv
+    Info (12023): Found entity 1: SOPC_Video_cmd_xbar_demux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cmd_xbar_demux_001.sv
+    Info (12023): Found entity 1: SOPC_Video_cmd_xbar_demux_001
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cmd_xbar_demux_002.sv
+    Info (12023): Found entity 1: SOPC_Video_cmd_xbar_demux_002
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cmd_xbar_mux.sv
+    Info (12023): Found entity 1: SOPC_Video_cmd_xbar_mux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cmd_xbar_mux_002.sv
+    Info (12023): Found entity 1: SOPC_Video_cmd_xbar_mux_002
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_cmd_xbar_mux_003.sv
+    Info (12023): Found entity 1: SOPC_Video_cmd_xbar_mux_003
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/sopc_video/submodules/sopc_video_id_router.sv
+    Info (12023): Found entity 1: SOPC_Video_id_router_default_decode
+    Info (12023): Found entity 2: SOPC_Video_id_router
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/sopc_video/submodules/sopc_video_id_router_002.sv
+    Info (12023): Found entity 1: SOPC_Video_id_router_002_default_decode
+    Info (12023): Found entity 2: SOPC_Video_id_router_002
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/sopc_video/submodules/sopc_video_id_router_003.sv
+    Info (12023): Found entity 1: SOPC_Video_id_router_003_default_decode
+    Info (12023): Found entity 2: SOPC_Video_id_router_003
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/sopc_video/submodules/sopc_video_id_router_004.sv
+    Info (12023): Found entity 1: SOPC_Video_id_router_004_default_decode
+    Info (12023): Found entity 2: SOPC_Video_id_router_004
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/sopc_video/submodules/sopc_video_id_router_016.sv
+    Info (12023): Found entity 1: SOPC_Video_id_router_016_default_decode
+    Info (12023): Found entity 2: SOPC_Video_id_router_016
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_irq_mapper.sv
+    Info (12023): Found entity 1: SOPC_Video_irq_mapper
+Info (12021): Found 5 design units, including 5 entities, in source file db/ip/sopc_video/submodules/sopc_video_jtag_uart_0.v
+    Info (12023): Found entity 1: SOPC_Video_jtag_uart_0_sim_scfifo_w
+    Info (12023): Found entity 2: SOPC_Video_jtag_uart_0_scfifo_w
+    Info (12023): Found entity 3: SOPC_Video_jtag_uart_0_sim_scfifo_r
+    Info (12023): Found entity 4: SOPC_Video_jtag_uart_0_scfifo_r
+    Info (12023): Found entity 5: SOPC_Video_jtag_uart_0
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_lcd.v
+    Info (12023): Found entity 1: SOPC_Video_lcd
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_red_leds.v
+    Info (12023): Found entity 1: SOPC_Video_red_leds
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_rsp_xbar_demux.sv
+    Info (12023): Found entity 1: SOPC_Video_rsp_xbar_demux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_rsp_xbar_demux_002.sv
+    Info (12023): Found entity 1: SOPC_Video_rsp_xbar_demux_002
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_rsp_xbar_demux_003.sv
+    Info (12023): Found entity 1: SOPC_Video_rsp_xbar_demux_003
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_rsp_xbar_demux_004.sv
+    Info (12023): Found entity 1: SOPC_Video_rsp_xbar_demux_004
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_rsp_xbar_mux.sv
+    Info (12023): Found entity 1: SOPC_Video_rsp_xbar_mux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_rsp_xbar_mux_001.sv
+    Info (12023): Found entity 1: SOPC_Video_rsp_xbar_mux_001
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/sopc_video/submodules/sopc_video_sdram_0.v
+    Info (12023): Found entity 1: SOPC_Video_sdram_0_input_efifo_module
+    Info (12023): Found entity 2: SOPC_Video_sdram_0
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_switch.v
+    Info (12023): Found entity 1: SOPC_Video_switch
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_sysid_qsys_0.v
+    Info (12023): Found entity 1: SOPC_Video_sysid_qsys_0
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_timer_system.v
+    Info (12023): Found entity 1: SOPC_Video_timer_system
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_video_bayer_resampler.v
+    Info (12023): Found entity 1: SOPC_Video_video_bayer_resampler
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_video_clipper_0.v
+    Info (12023): Found entity 1: SOPC_Video_video_clipper_0
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_video_rgb_resampler_0.v
+    Info (12023): Found entity 1: SOPC_Video_video_rgb_resampler_0
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/sopc_video_video_scaler_0.v
+    Info (12023): Found entity 1: SOPC_Video_video_scaler_0
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_customins_master_translator.v
+    Info (12023): Found entity 1: altera_customins_master_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_customins_slave_translator.sv
+    Info (12023): Found entity 1: altera_customins_slave_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_merlin_address_alignment.sv
+    Info (12023): Found entity 1: altera_merlin_address_alignment
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/sopc_video/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator
+    Info (12023): Found entity 2: altera_merlin_arb_adder
+Info (12021): Found 7 design units, including 7 entities, in source file db/ip/sopc_video/submodules/altera_merlin_burst_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment
+    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder
+    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor
+    Info (12023): Found entity 4: altera_merlin_burst_adapter_min
+    Info (12023): Found entity 5: altera_merlin_burst_adapter
+    Info (12023): Found entity 6: altera_merlin_burst_adapter_uncompressed_only
+    Info (12023): Found entity 7: altera_merlin_burst_adapter_full
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_merlin_width_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_width_adapter
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer
+Warning (10238): Verilog Module Declaration warning at altera_up_av_config_auto_init.v(70): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "altera_up_av_config_auto_init"
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init_d5m.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init_d5m
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init_dc2.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init_dc2
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init_lcm.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init_lcm
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init_ltm.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init_ltm
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init_ob_adv7180.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init_ob_adv7180
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init_ob_adv7181.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init_ob_adv7181
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init_ob_audio.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init_ob_audio
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init_ob_de2_115.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init_ob_de2_115
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init_ob_de2_35.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init_ob_de2_35
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_auto_init_ob_de2_70.v
+    Info (12023): Found entity 1: altera_up_av_config_auto_init_ob_de2_70
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_av_config_serial_bus_controller.v
+    Info (12023): Found entity 1: altera_up_av_config_serial_bus_controller
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_avalon_video_vga_timing.v
+    Info (12023): Found entity 1: altera_up_avalon_video_vga_timing
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_slow_clock_generator.v
+    Info (12023): Found entity 1: altera_up_slow_clock_generator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_camera_decoder.v
+    Info (12023): Found entity 1: altera_up_video_camera_decoder
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_clipper_add.v
+    Info (12023): Found entity 1: altera_up_video_clipper_add
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_clipper_counters.v
+    Info (12023): Found entity 1: altera_up_video_clipper_counters
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_clipper_drop.v
+    Info (12023): Found entity 1: altera_up_video_clipper_drop
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_decoder_add_endofpacket.v
+    Info (12023): Found entity 1: altera_up_video_decoder_add_endofpacket
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_dma_control_slave.v
+    Info (12023): Found entity 1: altera_up_video_dma_control_slave
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_dma_to_memory.v
+    Info (12023): Found entity 1: altera_up_video_dma_to_memory
+Warning (10275): Verilog HDL Module Instantiation warning at altera_up_video_dma_to_stream.v(291): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_dma_to_stream.v
+    Info (12023): Found entity 1: altera_up_video_dma_to_stream
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_dual_clock_fifo.v
+    Info (12023): Found entity 1: altera_up_video_dual_clock_fifo
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_itu_656_decoder.v
+    Info (12023): Found entity 1: altera_up_video_itu_656_decoder
+Warning (10275): Verilog HDL Module Instantiation warning at altera_up_video_scaler_multiply_height.v(307): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_scaler_multiply_height.v
+    Info (12023): Found entity 1: altera_up_video_scaler_multiply_height
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_scaler_multiply_width.v
+    Info (12023): Found entity 1: altera_up_video_scaler_multiply_width
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/altera_up_video_scaler_shrink.v
+    Info (12023): Found entity 1: altera_up_video_scaler_shrink
+Info (12021): Found 36 design units, including 36 entities, in source file db/ip/sopc_video/submodules/fpoint_hw_qsys.v
+    Info (12023): Found entity 1: fpoint_hw_qsys_mult_single
+    Info (12023): Found entity 2: fpoint_hw_qsys_addsub_single_altbarrel_shift_fjg
+    Info (12023): Found entity 3: fpoint_hw_qsys_addsub_single_altbarrel_shift_44e
+    Info (12023): Found entity 4: fpoint_hw_qsys_addsub_single_altpriority_encoder_i0b
+    Info (12023): Found entity 5: fpoint_hw_qsys_addsub_single_altpriority_encoder_l0b
+    Info (12023): Found entity 6: fpoint_hw_qsys_addsub_single_altpriority_encoder_q0b
+    Info (12023): Found entity 7: fpoint_hw_qsys_addsub_single_altpriority_encoder_iha
+    Info (12023): Found entity 8: fpoint_hw_qsys_addsub_single_altpriority_encoder_lha
+    Info (12023): Found entity 9: fpoint_hw_qsys_addsub_single_altpriority_encoder_qha
+    Info (12023): Found entity 10: fpoint_hw_qsys_addsub_single_altpriority_encoder_aja
+    Info (12023): Found entity 11: fpoint_hw_qsys_addsub_single_altpriority_encoder_a2b
+    Info (12023): Found entity 12: fpoint_hw_qsys_addsub_single_altpriority_encoder_9u8
+    Info (12023): Found entity 13: fpoint_hw_qsys_addsub_single_altpriority_encoder_64b
+    Info (12023): Found entity 14: fpoint_hw_qsys_addsub_single_altpriority_encoder_94b
+    Info (12023): Found entity 15: fpoint_hw_qsys_addsub_single_altpriority_encoder_e4b
+    Info (12023): Found entity 16: fpoint_hw_qsys_addsub_single_altpriority_encoder_u5b
+    Info (12023): Found entity 17: fpoint_hw_qsys_addsub_single_altpriority_encoder_6la
+    Info (12023): Found entity 18: fpoint_hw_qsys_addsub_single_altpriority_encoder_9la
+    Info (12023): Found entity 19: fpoint_hw_qsys_addsub_single_altpriority_encoder_ela
+    Info (12023): Found entity 20: fpoint_hw_qsys_addsub_single_altpriority_encoder_uma
+    Info (12023): Found entity 21: fpoint_hw_qsys_addsub_single_altpriority_encoder_tma
+    Info (12023): Found entity 22: fpoint_hw_qsys_addsub_single
+    Info (12023): Found entity 23: fpoint_hw_qsys_div_single_altfp_div_csa_vhf
+    Info (12023): Found entity 24: fpoint_hw_qsys_div_single_altfp_div_csa_mke
+    Info (12023): Found entity 25: fpoint_hw_qsys_div_single_altfp_div_csa_2jh
+    Info (12023): Found entity 26: fpoint_hw_qsys_div_single_altfp_div_csa_rle
+    Info (12023): Found entity 27: fpoint_hw_qsys_div_single_altfp_div_csa_pke
+    Info (12023): Found entity 28: fpoint_hw_qsys_div_single_altfp_div_csa_qle
+    Info (12023): Found entity 29: fpoint_hw_qsys_div_single_qds_block_mab
+    Info (12023): Found entity 30: fpoint_hw_qsys_div_single_srt_block_int_02n
+    Info (12023): Found entity 31: fpoint_hw_qsys_div_single_qds_block_ls9
+    Info (12023): Found entity 32: fpoint_hw_qsys_div_single_srt_block_int_84n
+    Info (12023): Found entity 33: fpoint_hw_qsys_div_single_srt_block_int_fum
+    Info (12023): Found entity 34: fpoint_hw_qsys_div_single_altfp_div_srt_ext_5mh
+    Info (12023): Found entity 35: fpoint_hw_qsys_div_single
+    Info (12023): Found entity 36: fpoint_hw_qsys
+Info (12021): Found 23 design units, including 23 entities, in source file db/ip/sopc_video/submodules/fpoint_qsys.v
+    Info (12023): Found entity 1: fpoint_qsys_mult_single
+    Info (12023): Found entity 2: fpoint_qsys_addsub_single_altbarrel_shift_fjg
+    Info (12023): Found entity 3: fpoint_qsys_addsub_single_altbarrel_shift_44e
+    Info (12023): Found entity 4: fpoint_qsys_addsub_single_altpriority_encoder_i0b
+    Info (12023): Found entity 5: fpoint_qsys_addsub_single_altpriority_encoder_l0b
+    Info (12023): Found entity 6: fpoint_qsys_addsub_single_altpriority_encoder_q0b
+    Info (12023): Found entity 7: fpoint_qsys_addsub_single_altpriority_encoder_iha
+    Info (12023): Found entity 8: fpoint_qsys_addsub_single_altpriority_encoder_lha
+    Info (12023): Found entity 9: fpoint_qsys_addsub_single_altpriority_encoder_qha
+    Info (12023): Found entity 10: fpoint_qsys_addsub_single_altpriority_encoder_aja
+    Info (12023): Found entity 11: fpoint_qsys_addsub_single_altpriority_encoder_a2b
+    Info (12023): Found entity 12: fpoint_qsys_addsub_single_altpriority_encoder_9u8
+    Info (12023): Found entity 13: fpoint_qsys_addsub_single_altpriority_encoder_64b
+    Info (12023): Found entity 14: fpoint_qsys_addsub_single_altpriority_encoder_94b
+    Info (12023): Found entity 15: fpoint_qsys_addsub_single_altpriority_encoder_e4b
+    Info (12023): Found entity 16: fpoint_qsys_addsub_single_altpriority_encoder_u5b
+    Info (12023): Found entity 17: fpoint_qsys_addsub_single_altpriority_encoder_6la
+    Info (12023): Found entity 18: fpoint_qsys_addsub_single_altpriority_encoder_9la
+    Info (12023): Found entity 19: fpoint_qsys_addsub_single_altpriority_encoder_ela
+    Info (12023): Found entity 20: fpoint_qsys_addsub_single_altpriority_encoder_uma
+    Info (12023): Found entity 21: fpoint_qsys_addsub_single_altpriority_encoder_tma
+    Info (12023): Found entity 22: fpoint_qsys_addsub_single
+    Info (12023): Found entity 23: fpoint_qsys
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sopc_video/submodules/fpoint_wrapper.v
+    Info (12023): Found entity 1: fpoint_wrapper
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sopc_video/submodules/pixel_scan.vhd
+    Info (12022): Found design unit 1: pixel_scan-beh
+    Info (12023): Found entity 1: pixel_scan
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(1567): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(1569): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(1725): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_CPU.v(2553): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_sdram_0.v(316): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_sdram_0.v(326): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_sdram_0.v(336): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at SOPC_Video_sdram_0.v(680): conditional expression evaluates to a constant
+Info (12127): Elaborating entity "Video_Edge_Detection" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "LEDR[17..2]" at Video_In_Edge.vhd(19)
+Warning (10873): Using initial value X (don't care) for net "LEDR[0]" at Video_In_Edge.vhd(19)
+Warning (10873): Using initial value X (don't care) for net "LEDG[8]" at Video_In_Edge.vhd(20)
+Info (12128): Elaborating entity "SOPC_Video" for hierarchy "SOPC_Video:NiosVideo"
+Info (12128): Elaborating entity "SOPC_Video_Onchip_Memory" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Onchip_Memory:onchip_memory"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Onchip_Memory:onchip_memory|altsyncram:the_altsyncram"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_Onchip_Memory:onchip_memory|altsyncram:the_altsyncram"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_Onchip_Memory:onchip_memory|altsyncram:the_altsyncram" with the following parameter:
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "init_file" = "SOPC_Video_Onchip_Memory.hex"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "maximum_depth" = "4096"
+    Info (12134): Parameter "numwords_a" = "4096"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+    Info (12134): Parameter "widthad_a" = "12"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_i2d1.tdf
+    Info (12023): Found entity 1: altsyncram_i2d1
+Info (12128): Elaborating entity "altsyncram_i2d1" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Onchip_Memory:onchip_memory|altsyncram:the_altsyncram|altsyncram_i2d1:auto_generated"
+Info (12128): Elaborating entity "SOPC_Video_Dual_Clock_FIFO" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo"
+Info (12128): Elaborating entity "dcfifo" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO" with the following parameter:
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "MAXIMIZE_SPEED=7"
+    Info (12134): Parameter "lpm_numwords" = "128"
+    Info (12134): Parameter "lpm_showahead" = "ON"
+    Info (12134): Parameter "lpm_type" = "dcfifo"
+    Info (12134): Parameter "lpm_width" = "32"
+    Info (12134): Parameter "lpm_widthu" = "7"
+    Info (12134): Parameter "overflow_checking" = "OFF"
+    Info (12134): Parameter "rdsync_delaypipe" = "5"
+    Info (12134): Parameter "underflow_checking" = "OFF"
+    Info (12134): Parameter "use_eab" = "ON"
+    Info (12134): Parameter "wrsync_delaypipe" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_5oj1.tdf
+    Info (12023): Found entity 1: dcfifo_5oj1
+Info (12128): Elaborating entity "dcfifo_5oj1" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_bcb.tdf
+    Info (12023): Found entity 1: a_gray2bin_bcb
+Info (12128): Elaborating entity "a_gray2bin_bcb" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|a_gray2bin_bcb:wrptr_g_gray2bin"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_f86.tdf
+    Info (12023): Found entity 1: a_graycounter_f86
+Info (12128): Elaborating entity "a_graycounter_f86" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|a_graycounter_f86:rdptr_g1p"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_41c.tdf
+    Info (12023): Found entity 1: a_graycounter_41c
+Info (12128): Elaborating entity "a_graycounter_41c" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|a_graycounter_41c:wrptr_g1p"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_31c.tdf
+    Info (12023): Found entity 1: a_graycounter_31c
+Info (12128): Elaborating entity "a_graycounter_31c" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|a_graycounter_31c:wrptr_gp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7ku.tdf
+    Info (12023): Found entity 1: altsyncram_7ku
+Info (12128): Elaborating entity "altsyncram_7ku" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|altsyncram_7ku:fifo_ram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_c2e.tdf
+    Info (12023): Found entity 1: dffpipe_c2e
+Info (12128): Elaborating entity "dffpipe_c2e" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|dffpipe_c2e:rdaclr"
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_7u7.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_7u7
+Info (12128): Elaborating entity "alt_synch_pipe_7u7" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|alt_synch_pipe_7u7:rs_dgwp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_1v8.tdf
+    Info (12023): Found entity 1: dffpipe_1v8
+Info (12128): Elaborating entity "dffpipe_1v8" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|alt_synch_pipe_7u7:rs_dgwp|dffpipe_1v8:dffpipe16"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_0v8.tdf
+    Info (12023): Found entity 1: dffpipe_0v8
+Info (12128): Elaborating entity "dffpipe_0v8" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|dffpipe_0v8:ws_brp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_8u7.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_8u7
+Info (12128): Elaborating entity "alt_synch_pipe_8u7" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|alt_synch_pipe_8u7:ws_dgrp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_2v8.tdf
+    Info (12023): Found entity 1: dffpipe_2v8
+Info (12128): Elaborating entity "dffpipe_2v8" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|alt_synch_pipe_8u7:ws_dgrp|dffpipe_2v8:dffpipe20"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_o16.tdf
+    Info (12023): Found entity 1: cmpr_o16
+Info (12128): Elaborating entity "cmpr_o16" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|cmpr_o16:rdempty_eq_comp1_lsb"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_1u7.tdf
+    Info (12023): Found entity 1: mux_1u7
+Info (12128): Elaborating entity "mux_1u7" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Dual_Clock_FIFO:dual_clock_fifo|dcfifo:Data_FIFO|dcfifo_5oj1:auto_generated|mux_1u7:rdemp_eq_comp_lsb_mux"
+Info (12128): Elaborating entity "SOPC_Video_Pixel_Buffer" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer:pixel_buffer"
+Info (12128): Elaborating entity "SOPC_Video_Pixel_Buffer_DMA" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma"
+Warning (10230): Verilog HDL assignment warning at SOPC_Video_Pixel_Buffer_DMA.v(256): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at SOPC_Video_Pixel_Buffer_DMA.v(257): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at SOPC_Video_Pixel_Buffer_DMA.v(262): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at SOPC_Video_Pixel_Buffer_DMA.v(263): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at SOPC_Video_Pixel_Buffer_DMA.v(343): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at SOPC_Video_Pixel_Buffer_DMA.v(357): truncated value with size 32 to match size of target (9)
+Info (12128): Elaborating entity "scfifo" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer" with the following parameter:
+    Info (12134): Parameter "add_ram_output_register" = "OFF"
+    Info (12134): Parameter "almost_empty_value" = "32"
+    Info (12134): Parameter "almost_full_value" = "96"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_numwords" = "128"
+    Info (12134): Parameter "lpm_showahead" = "ON"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "10"
+    Info (12134): Parameter "lpm_widthu" = "7"
+    Info (12134): Parameter "overflow_checking" = "OFF"
+    Info (12134): Parameter "underflow_checking" = "OFF"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_vv91.tdf
+    Info (12023): Found entity 1: scfifo_vv91
+Info (12128): Elaborating entity "scfifo_vv91" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer|scfifo_vv91:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_kn31.tdf
+    Info (12023): Found entity 1: a_dpfifo_kn31
+Info (12128): Elaborating entity "a_dpfifo_kn31" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer|scfifo_vv91:auto_generated|a_dpfifo_kn31:dpfifo"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jc81.tdf
+    Info (12023): Found entity 1: altsyncram_jc81
+Info (12128): Elaborating entity "altsyncram_jc81" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer|scfifo_vv91:auto_generated|a_dpfifo_kn31:dpfifo|altsyncram_jc81:FIFOram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_2o8.tdf
+    Info (12023): Found entity 1: cmpr_2o8
+Info (12128): Elaborating entity "cmpr_2o8" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer|scfifo_vv91:auto_generated|a_dpfifo_kn31:dpfifo|cmpr_2o8:almost_full_comparer"
+Info (12128): Elaborating entity "cmpr_2o8" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer|scfifo_vv91:auto_generated|a_dpfifo_kn31:dpfifo|cmpr_2o8:three_comparison"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_d5b.tdf
+    Info (12023): Found entity 1: cntr_d5b
+Info (12128): Elaborating entity "cntr_d5b" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer|scfifo_vv91:auto_generated|a_dpfifo_kn31:dpfifo|cntr_d5b:rd_ptr_msb"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_q57.tdf
+    Info (12023): Found entity 1: cntr_q57
+Info (12128): Elaborating entity "cntr_q57" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer|scfifo_vv91:auto_generated|a_dpfifo_kn31:dpfifo|cntr_q57:usedw_counter"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_e5b.tdf
+    Info (12023): Found entity 1: cntr_e5b
+Info (12128): Elaborating entity "cntr_e5b" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_Buffer_DMA:pixel_buffer_dma|scfifo:Image_Buffer|scfifo_vv91:auto_generated|a_dpfifo_kn31:dpfifo|cntr_e5b:wr_ptr"
+Info (12128): Elaborating entity "SOPC_Video_Pixel_RGB_Resampler" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler"
+Warning (10036): Verilog HDL or VHDL warning at SOPC_Video_Pixel_RGB_Resampler.v(125): object "a" assigned a value but never read
+Info (12128): Elaborating entity "SOPC_Video_VGA_Controller" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_VGA_Controller:vga_controller"
+Info (12128): Elaborating entity "altera_up_avalon_video_vga_timing" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_VGA_Controller:vga_controller|altera_up_avalon_video_vga_timing:VGA_Timing"
+Warning (10230): Verilog HDL assignment warning at altera_up_avalon_video_vga_timing.v(218): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at altera_up_avalon_video_vga_timing.v(219): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "SOPC_Video_Video_In_Decoder" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder"
+Info (12128): Elaborating entity "altera_up_video_camera_decoder" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_camera_decoder:Camera_Decoder"
+Info (12128): Elaborating entity "altera_up_video_dual_clock_fifo" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO"
+Info (12128): Elaborating entity "dcfifo" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component" with the following parameter:
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "MAXIMIZE_SPEED=5,"
+    Info (12134): Parameter "lpm_numwords" = "128"
+    Info (12134): Parameter "lpm_showahead" = "ON"
+    Info (12134): Parameter "lpm_type" = "dcfifo"
+    Info (12134): Parameter "lpm_width" = "10"
+    Info (12134): Parameter "lpm_widthu" = "7"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "rdsync_delaypipe" = "4"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+    Info (12134): Parameter "wrsync_delaypipe" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_12l1.tdf
+    Info (12023): Found entity 1: dcfifo_12l1
+Info (12128): Elaborating entity "dcfifo_12l1" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component|dcfifo_12l1:auto_generated"
+Info (12128): Elaborating entity "a_graycounter_41c" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component|dcfifo_12l1:auto_generated|a_graycounter_41c:wrptr_g1p"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vju.tdf
+    Info (12023): Found entity 1: altsyncram_vju
+Info (12128): Elaborating entity "altsyncram_vju" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component|dcfifo_12l1:auto_generated|altsyncram_vju:fifo_ram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_9u7.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_9u7
+Info (12128): Elaborating entity "alt_synch_pipe_9u7" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component|dcfifo_12l1:auto_generated|alt_synch_pipe_9u7:rs_dgwp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_3v8.tdf
+    Info (12023): Found entity 1: dffpipe_3v8
+Info (12128): Elaborating entity "dffpipe_3v8" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component|dcfifo_12l1:auto_generated|alt_synch_pipe_9u7:rs_dgwp|dffpipe_3v8:dffpipe6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_au7.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_au7
+Info (12128): Elaborating entity "alt_synch_pipe_au7" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component|dcfifo_12l1:auto_generated|alt_synch_pipe_au7:ws_dgrp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_4v8.tdf
+    Info (12023): Found entity 1: dffpipe_4v8
+Info (12128): Elaborating entity "dffpipe_4v8" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component|dcfifo_12l1:auto_generated|alt_synch_pipe_au7:ws_dgrp|dffpipe_4v8:dffpipe9"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_s16.tdf
+    Info (12023): Found entity 1: cmpr_s16
+Info (12128): Elaborating entity "cmpr_s16" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_In_Decoder:video_in_decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component|dcfifo_12l1:auto_generated|cmpr_s16:rdempty_eq_comp"
+Info (12128): Elaborating entity "SOPC_Video_Video_DMA" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_DMA:video_dma"
+Warning (10230): Verilog HDL assignment warning at SOPC_Video_Video_DMA.v(191): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at SOPC_Video_Video_DMA.v(194): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "altera_up_video_dma_control_slave" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_DMA:video_dma|altera_up_video_dma_control_slave:DMA_Control_Slave"
+Warning (10230): Verilog HDL assignment warning at altera_up_video_dma_control_slave.v(147): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at altera_up_video_dma_control_slave.v(148): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "altera_up_video_dma_to_memory" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Video_DMA:video_dma|altera_up_video_dma_to_memory:From_Stream_to_Memory"
+Info (12128): Elaborating entity "SOPC_Video_AV_Config" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_AV_Config:av_config"
+Info (12128): Elaborating entity "altera_up_av_config_auto_init" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_AV_Config:av_config|altera_up_av_config_auto_init:AV_Config_Auto_Init"
+Warning (10230): Verilog HDL assignment warning at altera_up_av_config_auto_init.v(156): truncated value with size 32 to match size of target (5)
+Info (12128): Elaborating entity "altera_up_av_config_auto_init_d5m" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_AV_Config:av_config|altera_up_av_config_auto_init_d5m:Auto_Init_D5M_ROM"
+Info (12128): Elaborating entity "altera_up_av_config_serial_bus_controller" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_AV_Config:av_config|altera_up_av_config_serial_bus_controller:Serial_Bus_Controller"
+Warning (10230): Verilog HDL assignment warning at altera_up_av_config_serial_bus_controller.v(260): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "altera_up_slow_clock_generator" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_AV_Config:av_config|altera_up_av_config_serial_bus_controller:Serial_Bus_Controller|altera_up_slow_clock_generator:Serial_Config_Clock_Generator"
+Warning (10230): Verilog HDL assignment warning at altera_up_slow_clock_generator.v(128): truncated value with size 32 to match size of target (11)
+Info (12128): Elaborating entity "SOPC_Video_CPU" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu"
+Info (12128): Elaborating entity "SOPC_Video_CPU_test_bench" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_test_bench:the_SOPC_Video_CPU_test_bench"
+Info (12128): Elaborating entity "SOPC_Video_CPU_register_bank_a_module" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_register_bank_a_module:SOPC_Video_CPU_register_bank_a"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_register_bank_a_module:SOPC_Video_CPU_register_bank_a|altsyncram:the_altsyncram"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_register_bank_a_module:SOPC_Video_CPU_register_bank_a|altsyncram:the_altsyncram"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_register_bank_a_module:SOPC_Video_CPU_register_bank_a|altsyncram:the_altsyncram" with the following parameter:
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "SOPC_Video_CPU_rf_ram_a.mif"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "numwords_b" = "32"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "widthad_b" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qag1.tdf
+    Info (12023): Found entity 1: altsyncram_qag1
+Info (12128): Elaborating entity "altsyncram_qag1" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_register_bank_a_module:SOPC_Video_CPU_register_bank_a|altsyncram:the_altsyncram|altsyncram_qag1:auto_generated"
+Info (12128): Elaborating entity "SOPC_Video_CPU_register_bank_b_module" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_register_bank_b_module:SOPC_Video_CPU_register_bank_b"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_register_bank_b_module:SOPC_Video_CPU_register_bank_b|altsyncram:the_altsyncram"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_register_bank_b_module:SOPC_Video_CPU_register_bank_b|altsyncram:the_altsyncram"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_register_bank_b_module:SOPC_Video_CPU_register_bank_b|altsyncram:the_altsyncram" with the following parameter:
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "SOPC_Video_CPU_rf_ram_b.mif"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "numwords_b" = "32"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "widthad_b" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rag1.tdf
+    Info (12023): Found entity 1: altsyncram_rag1
+Info (12128): Elaborating entity "altsyncram_rag1" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_register_bank_b_module:SOPC_Video_CPU_register_bank_b|altsyncram:the_altsyncram|altsyncram_rag1:auto_generated"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_debug" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_debug:the_SOPC_Video_CPU_nios2_oci_debug"
+Info (12128): Elaborating entity "altera_std_synchronizer" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_debug:the_SOPC_Video_CPU_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_debug:the_SOPC_Video_CPU_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_debug:the_SOPC_Video_CPU_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer" with the following parameter:
+    Info (12134): Parameter "depth" = "2"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_ocimem" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_ocimem:the_SOPC_Video_CPU_nios2_ocimem"
+Info (12128): Elaborating entity "SOPC_Video_CPU_ociram_sp_ram_module" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_ocimem:the_SOPC_Video_CPU_nios2_ocimem|SOPC_Video_CPU_ociram_sp_ram_module:SOPC_Video_CPU_ociram_sp_ram"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_ocimem:the_SOPC_Video_CPU_nios2_ocimem|SOPC_Video_CPU_ociram_sp_ram_module:SOPC_Video_CPU_ociram_sp_ram|altsyncram:the_altsyncram"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_ocimem:the_SOPC_Video_CPU_nios2_ocimem|SOPC_Video_CPU_ociram_sp_ram_module:SOPC_Video_CPU_ociram_sp_ram|altsyncram:the_altsyncram"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_ocimem:the_SOPC_Video_CPU_nios2_ocimem|SOPC_Video_CPU_ociram_sp_ram_module:SOPC_Video_CPU_ociram_sp_ram|altsyncram:the_altsyncram" with the following parameter:
+    Info (12134): Parameter "init_file" = "SOPC_Video_CPU_ociram_default_contents.mif"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+    Info (12134): Parameter "widthad_a" = "8"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_un71.tdf
+    Info (12023): Found entity 1: altsyncram_un71
+Info (12128): Elaborating entity "altsyncram_un71" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_ocimem:the_SOPC_Video_CPU_nios2_ocimem|SOPC_Video_CPU_ociram_sp_ram_module:SOPC_Video_CPU_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_un71:auto_generated"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_avalon_reg" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_avalon_reg:the_SOPC_Video_CPU_nios2_avalon_reg"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_break" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_break:the_SOPC_Video_CPU_nios2_oci_break"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_xbrk" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_xbrk:the_SOPC_Video_CPU_nios2_oci_xbrk"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_dbrk" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_dbrk:the_SOPC_Video_CPU_nios2_oci_dbrk"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_itrace" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_itrace:the_SOPC_Video_CPU_nios2_oci_itrace"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_dtrace" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_dtrace:the_SOPC_Video_CPU_nios2_oci_dtrace"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_td_mode" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_dtrace:the_SOPC_Video_CPU_nios2_oci_dtrace|SOPC_Video_CPU_nios2_oci_td_mode:SOPC_Video_CPU_nios2_oci_trc_ctrl_td_mode"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_fifo" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_fifo:the_SOPC_Video_CPU_nios2_oci_fifo"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_compute_tm_count" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_fifo:the_SOPC_Video_CPU_nios2_oci_fifo|SOPC_Video_CPU_nios2_oci_compute_tm_count:SOPC_Video_CPU_nios2_oci_compute_tm_count_tm_count"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_fifowp_inc" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_fifo:the_SOPC_Video_CPU_nios2_oci_fifo|SOPC_Video_CPU_nios2_oci_fifowp_inc:SOPC_Video_CPU_nios2_oci_fifowp_inc_fifowp"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_fifocount_inc" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_fifo:the_SOPC_Video_CPU_nios2_oci_fifo|SOPC_Video_CPU_nios2_oci_fifocount_inc:SOPC_Video_CPU_nios2_oci_fifocount_inc_fifocount"
+Info (12128): Elaborating entity "SOPC_Video_CPU_oci_test_bench" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_fifo:the_SOPC_Video_CPU_nios2_oci_fifo|SOPC_Video_CPU_oci_test_bench:the_SOPC_Video_CPU_oci_test_bench"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_pib" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_pib:the_SOPC_Video_CPU_nios2_oci_pib"
+Info (12128): Elaborating entity "SOPC_Video_CPU_nios2_oci_im" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_nios2_oci_im:the_SOPC_Video_CPU_nios2_oci_im"
+Info (12128): Elaborating entity "SOPC_Video_CPU_jtag_debug_module_wrapper" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_jtag_debug_module_wrapper:the_SOPC_Video_CPU_jtag_debug_module_wrapper"
+Info (12128): Elaborating entity "SOPC_Video_CPU_jtag_debug_module_tck" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_jtag_debug_module_wrapper:the_SOPC_Video_CPU_jtag_debug_module_wrapper|SOPC_Video_CPU_jtag_debug_module_tck:the_SOPC_Video_CPU_jtag_debug_module_tck"
+Info (12128): Elaborating entity "SOPC_Video_CPU_jtag_debug_module_sysclk" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_jtag_debug_module_wrapper:the_SOPC_Video_CPU_jtag_debug_module_wrapper|SOPC_Video_CPU_jtag_debug_module_sysclk:the_SOPC_Video_CPU_jtag_debug_module_sysclk"
+Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_jtag_debug_module_wrapper:the_SOPC_Video_CPU_jtag_debug_module_wrapper|sld_virtual_jtag_basic:SOPC_Video_CPU_jtag_debug_module_phy"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_jtag_debug_module_wrapper:the_SOPC_Video_CPU_jtag_debug_module_wrapper|sld_virtual_jtag_basic:SOPC_Video_CPU_jtag_debug_module_phy"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_jtag_debug_module_wrapper:the_SOPC_Video_CPU_jtag_debug_module_wrapper|sld_virtual_jtag_basic:SOPC_Video_CPU_jtag_debug_module_phy" with the following parameter:
+    Info (12134): Parameter "sld_auto_instance_index" = "YES"
+    Info (12134): Parameter "sld_instance_index" = "0"
+    Info (12134): Parameter "sld_ir_width" = "2"
+    Info (12134): Parameter "sld_mfg_id" = "70"
+    Info (12134): Parameter "sld_sim_action" = ""
+    Info (12134): Parameter "sld_sim_n_scan" = "0"
+    Info (12134): Parameter "sld_sim_total_length" = "0"
+    Info (12134): Parameter "sld_type_id" = "34"
+    Info (12134): Parameter "sld_version" = "3"
+Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_jtag_debug_module_wrapper:the_SOPC_Video_CPU_jtag_debug_module_wrapper|sld_virtual_jtag_basic:SOPC_Video_CPU_jtag_debug_module_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst"
+Info (12131): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_jtag_debug_module_wrapper:the_SOPC_Video_CPU_jtag_debug_module_wrapper|sld_virtual_jtag_basic:SOPC_Video_CPU_jtag_debug_module_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_CPU:cpu|SOPC_Video_CPU_nios2_oci:the_SOPC_Video_CPU_nios2_oci|SOPC_Video_CPU_jtag_debug_module_wrapper:the_SOPC_Video_CPU_jtag_debug_module_wrapper|sld_virtual_jtag_basic:SOPC_Video_CPU_jtag_debug_module_phy"
+Info (12128): Elaborating entity "SOPC_Video_Clock_Signals" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Clock_Signals:clock_signals"
+Info (12128): Elaborating entity "altpll" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_Clock_Signals:clock_signals|altpll:DE_Clock_Generator_System"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_Clock_Signals:clock_signals|altpll:DE_Clock_Generator_System"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_Clock_Signals:clock_signals|altpll:DE_Clock_Generator_System" with the following parameter:
+    Info (12134): Parameter "clk0_divide_by" = "1"
+    Info (12134): Parameter "clk0_duty_cycle" = "50"
+    Info (12134): Parameter "clk0_multiply_by" = "1"
+    Info (12134): Parameter "clk0_phase_shift" = "0"
+    Info (12134): Parameter "clk1_divide_by" = "1"
+    Info (12134): Parameter "clk1_duty_cycle" = "50"
+    Info (12134): Parameter "clk1_multiply_by" = "1"
+    Info (12134): Parameter "clk1_phase_shift" = "-3000"
+    Info (12134): Parameter "clk2_divide_by" = "2"
+    Info (12134): Parameter "clk2_duty_cycle" = "50"
+    Info (12134): Parameter "clk2_multiply_by" = "1"
+    Info (12134): Parameter "clk2_phase_shift" = "20000"
+    Info (12134): Parameter "compensate_clock" = "CLK0"
+    Info (12134): Parameter "gate_lock_signal" = "NO"
+    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "invalid_lock_multiplier" = "5"
+    Info (12134): Parameter "lpm_type" = "altpll"
+    Info (12134): Parameter "operation_mode" = "NORMAL"
+    Info (12134): Parameter "pll_type" = "FAST"
+    Info (12134): Parameter "port_activeclock" = "PORT_UNUSED"
+    Info (12134): Parameter "port_areset" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkloss" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info (12134): Parameter "port_fbin" = "PORT_UNUSED"
+    Info (12134): Parameter "port_inclk0" = "PORT_USED"
+    Info (12134): Parameter "port_inclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_locked" = "PORT_USED"
+    Info (12134): Parameter "port_pfdena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pllena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclk" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandata" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandataout" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanread" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk1" = "PORT_USED"
+    Info (12134): Parameter "port_clk2" = "PORT_USED"
+    Info (12134): Parameter "port_clk3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_enable0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_enable1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclkena0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclkena1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclkena2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclkena3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_sclkout0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_sclkout1" = "PORT_UNUSED"
+    Info (12134): Parameter "valid_lock_multiplier" = "1"
+Info (12128): Elaborating entity "SOPC_Video_jtag_uart_0" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0"
+Info (12128): Elaborating entity "SOPC_Video_jtag_uart_0_scfifo_w" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w"
+Info (12128): Elaborating entity "scfifo" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w|scfifo:wfifo"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w|scfifo:wfifo"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w|scfifo:wfifo" with the following parameter:
+    Info (12134): Parameter "lpm_hint" = "RAM_BLOCK_TYPE=AUTO"
+    Info (12134): Parameter "lpm_numwords" = "64"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widthu" = "6"
+    Info (12134): Parameter "overflow_checking" = "OFF"
+    Info (12134): Parameter "underflow_checking" = "OFF"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_1n21.tdf
+    Info (12023): Found entity 1: scfifo_1n21
+Info (12128): Elaborating entity "scfifo_1n21" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_8t21.tdf
+    Info (12023): Found entity 1: a_dpfifo_8t21
+Info (12128): Elaborating entity "a_dpfifo_8t21" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_fefifo_7cf.tdf
+    Info (12023): Found entity 1: a_fefifo_7cf
+Info (12128): Elaborating entity "a_fefifo_7cf" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|a_fefifo_7cf:fifo_state"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_rj7.tdf
+    Info (12023): Found entity 1: cntr_rj7
+Info (12128): Elaborating entity "cntr_rj7" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|a_fefifo_7cf:fifo_state|cntr_rj7:count_usedw"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dpram_5h21.tdf
+    Info (12023): Found entity 1: dpram_5h21
+Info (12128): Elaborating entity "dpram_5h21" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9tl1.tdf
+    Info (12023): Found entity 1: altsyncram_9tl1
+Info (12128): Elaborating entity "altsyncram_9tl1" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram|altsyncram_9tl1:altsyncram2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_fjb.tdf
+    Info (12023): Found entity 1: cntr_fjb
+Info (12128): Elaborating entity "cntr_fjb" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_w:the_SOPC_Video_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|cntr_fjb:rd_ptr_count"
+Info (12128): Elaborating entity "SOPC_Video_jtag_uart_0_scfifo_r" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|SOPC_Video_jtag_uart_0_scfifo_r:the_SOPC_Video_jtag_uart_0_scfifo_r"
+Info (12128): Elaborating entity "alt_jtag_atlantic" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:SOPC_Video_jtag_uart_0_alt_jtag_atlantic"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:SOPC_Video_jtag_uart_0_alt_jtag_atlantic"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:SOPC_Video_jtag_uart_0_alt_jtag_atlantic" with the following parameter:
+    Info (12134): Parameter "INSTANCE_ID" = "0"
+    Info (12134): Parameter "LOG2_RXFIFO_DEPTH" = "6"
+    Info (12134): Parameter "LOG2_TXFIFO_DEPTH" = "6"
+    Info (12134): Parameter "SLD_AUTO_INSTANCE_INDEX" = "YES"
+Info (12128): Elaborating entity "SOPC_Video_video_bayer_resampler" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_bayer_resampler:video_bayer_resampler"
+Warning (10230): Verilog HDL assignment warning at SOPC_Video_video_bayer_resampler.v(203): truncated value with size 32 to match size of target (12)
+Info (12128): Elaborating entity "altshift_taps" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_bayer_resampler:video_bayer_resampler|altshift_taps:bayern_pattern_shift_reg"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|SOPC_Video_video_bayer_resampler:video_bayer_resampler|altshift_taps:bayern_pattern_shift_reg"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|SOPC_Video_video_bayer_resampler:video_bayer_resampler|altshift_taps:bayern_pattern_shift_reg" with the following parameter:
+    Info (12134): Parameter "lpm_hint" = "RAM_BLOCK_TYPE=M4K"
+    Info (12134): Parameter "lpm_type" = "altshift_taps"
+    Info (12134): Parameter "number_of_taps" = "1"
+    Info (12134): Parameter "tap_distance" = "2592"
+    Info (12134): Parameter "width" = "8"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_tor.tdf
+    Info (12023): Found entity 1: shift_taps_tor
+Info (12128): Elaborating entity "shift_taps_tor" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_bayer_resampler:video_bayer_resampler|altshift_taps:bayern_pattern_shift_reg|shift_taps_tor:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6fa1.tdf
+    Info (12023): Found entity 1: altsyncram_6fa1
+Info (12128): Elaborating entity "altsyncram_6fa1" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_bayer_resampler:video_bayer_resampler|altshift_taps:bayern_pattern_shift_reg|shift_taps_tor:auto_generated|altsyncram_6fa1:altsyncram2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_2rf.tdf
+    Info (12023): Found entity 1: cntr_2rf
+Info (12128): Elaborating entity "cntr_2rf" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_bayer_resampler:video_bayer_resampler|altshift_taps:bayern_pattern_shift_reg|shift_taps_tor:auto_generated|cntr_2rf:cntr1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ndc.tdf
+    Info (12023): Found entity 1: cmpr_ndc
+Info (12128): Elaborating entity "cmpr_ndc" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_bayer_resampler:video_bayer_resampler|altshift_taps:bayern_pattern_shift_reg|shift_taps_tor:auto_generated|cntr_2rf:cntr1|cmpr_ndc:cmpr5"
+Info (12128): Elaborating entity "SOPC_Video_video_clipper_0" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_clipper_0:video_clipper_0"
+Info (12128): Elaborating entity "altera_up_video_clipper_drop" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_clipper_0:video_clipper_0|altera_up_video_clipper_drop:Clipper_Drop"
+Info (12128): Elaborating entity "altera_up_video_clipper_counters" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_clipper_0:video_clipper_0|altera_up_video_clipper_drop:Clipper_Drop|altera_up_video_clipper_counters:Clipper_Drop_Counters"
+Warning (10230): Verilog HDL assignment warning at altera_up_video_clipper_counters.v(139): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at altera_up_video_clipper_counters.v(150): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "altera_up_video_clipper_add" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_clipper_0:video_clipper_0|altera_up_video_clipper_add:Clipper_Add"
+Info (12128): Elaborating entity "altera_up_video_clipper_counters" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_clipper_0:video_clipper_0|altera_up_video_clipper_add:Clipper_Add|altera_up_video_clipper_counters:Clipper_Add_Counters"
+Warning (10230): Verilog HDL assignment warning at altera_up_video_clipper_counters.v(139): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at altera_up_video_clipper_counters.v(150): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "SOPC_Video_video_scaler_0" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_scaler_0:video_scaler_0"
+Info (12128): Elaborating entity "altera_up_video_scaler_shrink" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_scaler_0:video_scaler_0|altera_up_video_scaler_shrink:Shrink_Frame"
+Warning (10230): Verilog HDL assignment warning at altera_up_video_scaler_shrink.v(215): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at altera_up_video_scaler_shrink.v(228): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "SOPC_Video_video_rgb_resampler_0" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_video_rgb_resampler_0:video_rgb_resampler_0"
+Warning (10036): Verilog HDL or VHDL warning at SOPC_Video_video_rgb_resampler_0.v(125): object "a" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at SOPC_Video_video_rgb_resampler_0.v(162): truncated value with size 2 to match size of target (1)
+Info (12128): Elaborating entity "SOPC_Video_sysid_qsys_0" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_sysid_qsys_0:sysid_qsys_0"
+Info (12128): Elaborating entity "SOPC_Video_sdram_0" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_sdram_0:sdram_0"
+Info (12128): Elaborating entity "SOPC_Video_sdram_0_input_efifo_module" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_sdram_0:sdram_0|SOPC_Video_sdram_0_input_efifo_module:the_SOPC_Video_sdram_0_input_efifo_module"
+Info (12128): Elaborating entity "SOPC_Video_timer_system" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_timer_system:timer_system"
+Info (12128): Elaborating entity "SOPC_Video_lcd" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_lcd:lcd"
+Info (12128): Elaborating entity "SOPC_Video_red_leds" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_red_leds:red_leds"
+Info (12128): Elaborating entity "SOPC_Video_switch" for hierarchy "SOPC_Video:NiosVideo|SOPC_Video_switch:switch"
+Info (12128): Elaborating entity "fpoint_wrapper" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0"
+Info (12128): Elaborating entity "fpoint_qsys" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance"
+Info (12128): Elaborating entity "fpoint_qsys_mult_single" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_add_adder"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_add_adder"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_add_adder" with the following parameter:
+    Info (12134): Parameter "lpm_pipeline" = "1"
+    Info (12134): Parameter "lpm_width" = "9"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_fjd.tdf
+    Info (12023): Found entity 1: add_sub_fjd
+Info (12128): Elaborating entity "add_sub_fjd" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_add_adder|add_sub_fjd:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_adj_adder"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_adj_adder"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_adj_adder" with the following parameter:
+    Info (12134): Parameter "lpm_pipeline" = "0"
+    Info (12134): Parameter "lpm_width" = "10"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_r3c.tdf
+    Info (12023): Found entity 1: add_sub_r3c
+Info (12128): Elaborating entity "add_sub_r3c" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_adj_adder|add_sub_r3c:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_bias_subtr"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_bias_subtr"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_bias_subtr" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "SUB"
+    Info (12134): Parameter "lpm_pipeline" = "0"
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_width" = "10"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_egg.tdf
+    Info (12023): Found entity 1: add_sub_egg
+Info (12128): Elaborating entity "add_sub_egg" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:exp_bias_subtr|add_sub_egg:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:man_round_adder"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:man_round_adder"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:man_round_adder" with the following parameter:
+    Info (12134): Parameter "lpm_pipeline" = "0"
+    Info (12134): Parameter "lpm_width" = "25"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pb.tdf
+    Info (12023): Found entity 1: add_sub_7pb
+Info (12128): Elaborating entity "add_sub_7pb" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_add_sub:man_round_adder|add_sub_7pb:auto_generated"
+Info (12128): Elaborating entity "lpm_mult" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_mult:man_product2_mult"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_mult:man_product2_mult"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_mult:man_product2_mult" with the following parameter:
+    Info (12134): Parameter "lpm_pipeline" = "5"
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_widtha" = "24"
+    Info (12134): Parameter "lpm_widthb" = "24"
+    Info (12134): Parameter "lpm_widthp" = "48"
+    Info (12134): Parameter "lpm_widths" = "1"
+    Info (12134): Parameter "lpm_type" = "lpm_mult"
+    Info (12134): Parameter "lpm_hint" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_5ft.tdf
+    Info (12023): Found entity 1: mult_5ft
+Info (12128): Elaborating entity "mult_5ft" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_mult_single:the_fp_mult|lpm_mult:man_product2_mult|mult_5ft:auto_generated"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altbarrel_shift_fjg" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altbarrel_shift_fjg:lbarrel_shift"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altbarrel_shift_44e" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altbarrel_shift_44e:rbarrel_shift"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_9u8" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_9u8:leading_zeroes_cnt"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_aja" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_9u8:leading_zeroes_cnt|fpoint_qsys_addsub_single_altpriority_encoder_aja:altpriority_encoder7"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_q0b" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_9u8:leading_zeroes_cnt|fpoint_qsys_addsub_single_altpriority_encoder_aja:altpriority_encoder7|fpoint_qsys_addsub_single_altpriority_encoder_q0b:altpriority_encoder10"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_l0b" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_9u8:leading_zeroes_cnt|fpoint_qsys_addsub_single_altpriority_encoder_aja:altpriority_encoder7|fpoint_qsys_addsub_single_altpriority_encoder_q0b:altpriority_encoder10|fpoint_qsys_addsub_single_altpriority_encoder_l0b:altpriority_encoder11"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_i0b" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_9u8:leading_zeroes_cnt|fpoint_qsys_addsub_single_altpriority_encoder_aja:altpriority_encoder7|fpoint_qsys_addsub_single_altpriority_encoder_q0b:altpriority_encoder10|fpoint_qsys_addsub_single_altpriority_encoder_l0b:altpriority_encoder11|fpoint_qsys_addsub_single_altpriority_encoder_i0b:altpriority_encoder13"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_qha" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_9u8:leading_zeroes_cnt|fpoint_qsys_addsub_single_altpriority_encoder_aja:altpriority_encoder7|fpoint_qsys_addsub_single_altpriority_encoder_qha:altpriority_encoder9"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_lha" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_9u8:leading_zeroes_cnt|fpoint_qsys_addsub_single_altpriority_encoder_aja:altpriority_encoder7|fpoint_qsys_addsub_single_altpriority_encoder_qha:altpriority_encoder9|fpoint_qsys_addsub_single_altpriority_encoder_lha:altpriority_encoder15"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_iha" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_9u8:leading_zeroes_cnt|fpoint_qsys_addsub_single_altpriority_encoder_aja:altpriority_encoder7|fpoint_qsys_addsub_single_altpriority_encoder_qha:altpriority_encoder9|fpoint_qsys_addsub_single_altpriority_encoder_lha:altpriority_encoder15|fpoint_qsys_addsub_single_altpriority_encoder_iha:altpriority_encoder17"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_a2b" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_9u8:leading_zeroes_cnt|fpoint_qsys_addsub_single_altpriority_encoder_a2b:altpriority_encoder8"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_tma" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_tma:trailing_zeros_cnt"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_u5b" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_tma:trailing_zeros_cnt|fpoint_qsys_addsub_single_altpriority_encoder_u5b:altpriority_encoder21"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_e4b" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_tma:trailing_zeros_cnt|fpoint_qsys_addsub_single_altpriority_encoder_u5b:altpriority_encoder21|fpoint_qsys_addsub_single_altpriority_encoder_e4b:altpriority_encoder23"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_94b" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_tma:trailing_zeros_cnt|fpoint_qsys_addsub_single_altpriority_encoder_u5b:altpriority_encoder21|fpoint_qsys_addsub_single_altpriority_encoder_e4b:altpriority_encoder23|fpoint_qsys_addsub_single_altpriority_encoder_94b:altpriority_encoder25"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_64b" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_tma:trailing_zeros_cnt|fpoint_qsys_addsub_single_altpriority_encoder_u5b:altpriority_encoder21|fpoint_qsys_addsub_single_altpriority_encoder_e4b:altpriority_encoder23|fpoint_qsys_addsub_single_altpriority_encoder_94b:altpriority_encoder25|fpoint_qsys_addsub_single_altpriority_encoder_64b:altpriority_encoder27"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_uma" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_tma:trailing_zeros_cnt|fpoint_qsys_addsub_single_altpriority_encoder_uma:altpriority_encoder22"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_ela" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_tma:trailing_zeros_cnt|fpoint_qsys_addsub_single_altpriority_encoder_uma:altpriority_encoder22|fpoint_qsys_addsub_single_altpriority_encoder_ela:altpriority_encoder30"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_9la" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_tma:trailing_zeros_cnt|fpoint_qsys_addsub_single_altpriority_encoder_uma:altpriority_encoder22|fpoint_qsys_addsub_single_altpriority_encoder_ela:altpriority_encoder30|fpoint_qsys_addsub_single_altpriority_encoder_9la:altpriority_encoder32"
+Info (12128): Elaborating entity "fpoint_qsys_addsub_single_altpriority_encoder_6la" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|fpoint_qsys_addsub_single_altpriority_encoder_tma:trailing_zeros_cnt|fpoint_qsys_addsub_single_altpriority_encoder_uma:altpriority_encoder22|fpoint_qsys_addsub_single_altpriority_encoder_ela:altpriority_encoder30|fpoint_qsys_addsub_single_altpriority_encoder_9la:altpriority_encoder32|fpoint_qsys_addsub_single_altpriority_encoder_6la:altpriority_encoder34"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub1"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub1"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub1" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "SUB"
+    Info (12134): Parameter "lpm_pipeline" = "1"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_width" = "9"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_voh.tdf
+    Info (12023): Found entity 1: add_sub_voh
+Info (12128): Elaborating entity "add_sub_voh" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub1|add_sub_voh:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub3"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub3"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub3" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "SUB"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_width" = "6"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lre.tdf
+    Info (12023): Found entity 1: add_sub_lre
+Info (12128): Elaborating entity "add_sub_lre" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub3|add_sub_lre:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub4"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub4"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub4" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "ADD"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_width" = "9"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_nqe.tdf
+    Info (12023): Found entity 1: add_sub_nqe
+Info (12128): Elaborating entity "add_sub_nqe" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub4|add_sub_nqe:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub5"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub5"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub5" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "ADD"
+    Info (12134): Parameter "lpm_pipeline" = "1"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_width" = "9"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_unh.tdf
+    Info (12023): Found entity 1: add_sub_unh
+Info (12128): Elaborating entity "add_sub_unh" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:add_sub5|add_sub_unh:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_lower"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_lower"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_lower" with the following parameter:
+    Info (12134): Parameter "lpm_pipeline" = "1"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_width" = "14"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ugh.tdf
+    Info (12023): Found entity 1: add_sub_ugh
+Info (12128): Elaborating entity "add_sub_ugh" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_lower|add_sub_ugh:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_upper0"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_upper0"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_upper0" with the following parameter:
+    Info (12134): Parameter "lpm_pipeline" = "1"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_width" = "14"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_32h.tdf
+    Info (12023): Found entity 1: add_sub_32h
+Info (12128): Elaborating entity "add_sub_32h" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_upper0|add_sub_32h:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_upper1"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_upper1"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_2comp_res_upper1" with the following parameter:
+    Info (12134): Parameter "lpm_pipeline" = "1"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_width" = "14"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_res_rounding_add_sub_lower"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_res_rounding_add_sub_lower"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_res_rounding_add_sub_lower" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "ADD"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_width" = "13"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_taf.tdf
+    Info (12023): Found entity 1: add_sub_taf
+Info (12128): Elaborating entity "add_sub_taf" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_res_rounding_add_sub_lower|add_sub_taf:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_res_rounding_add_sub_upper1"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_res_rounding_add_sub_upper1"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_res_rounding_add_sub_upper1" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "ADD"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_width" = "13"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_6jf.tdf
+    Info (12023): Found entity 1: add_sub_6jf
+Info (12128): Elaborating entity "add_sub_6jf" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_add_sub:man_res_rounding_add_sub_upper1|add_sub_6jf:auto_generated"
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_compare:trailing_zeros_limit_comparator"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_compare:trailing_zeros_limit_comparator"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_compare:trailing_zeros_limit_comparator" with the following parameter:
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_width" = "6"
+    Info (12134): Parameter "lpm_type" = "lpm_compare"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_aag.tdf
+    Info (12023): Found entity 1: cmpr_aag
+Info (12128): Elaborating entity "cmpr_aag" for hierarchy "SOPC_Video:NiosVideo|fpoint_wrapper:nios_custom_instr_floating_point_0|fpoint_qsys:fpoint_instance|fpoint_qsys_addsub_single:the_fp_addsub|lpm_compare:trailing_zeros_limit_comparator|cmpr_aag:auto_generated"
+Info (12128): Elaborating entity "Altera_UP_SD_Card_Avalon_Interface" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0"
+Info (12128): Elaborating entity "Altera_UP_SD_Card_Interface" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port"
+Info (12128): Elaborating entity "Altera_UP_SD_Card_48_bit_Command_Generator" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_48_bit_Command_Generator:command_generator"
+Info (12128): Elaborating entity "Altera_UP_SD_CRC7_Generator" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_48_bit_Command_Generator:command_generator|Altera_UP_SD_CRC7_Generator:CRC7_Gen"
+Info (12128): Elaborating entity "Altera_UP_SD_Card_Response_Receiver" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Response_Receiver:response_receiver"
+Info (12128): Elaborating entity "Altera_UP_SD_Card_Control_FSM" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Control_FSM:control_FSM"
+Info (12128): Elaborating entity "Altera_UP_SD_Card_Clock" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Clock:clock_generator"
+Info (12128): Elaborating entity "Altera_UP_SD_Signal_Trigger" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Signal_Trigger:SD_clock_pulse_trigger"
+Info (12128): Elaborating entity "Altera_UP_SD_Card_Buffer" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Buffer:data_line"
+Info (12128): Elaborating entity "Altera_UP_SD_CRC16_Generator" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Buffer:data_line|Altera_UP_SD_CRC16_Generator:crc16_checker"
+Info (12128): Elaborating entity "Altera_UP_SD_Card_Memory_Block" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Buffer:data_line|Altera_UP_SD_Card_Memory_Block:packet_memory"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Buffer:data_line|Altera_UP_SD_Card_Memory_Block:packet_memory|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Buffer:data_line|Altera_UP_SD_Card_Memory_Block:packet_memory|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Buffer:data_line|Altera_UP_SD_Card_Memory_Block:packet_memory|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "initial_data.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "4096"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "12"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7n92.tdf
+    Info (12023): Found entity 1: altsyncram_7n92
+Info (12128): Elaborating entity "altsyncram_7n92" for hierarchy "SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Buffer:data_line|Altera_UP_SD_Card_Memory_Block:packet_memory|altsyncram:altsyncram_component|altsyncram_7n92:auto_generated"
+Info (12128): Elaborating entity "pixel_scan" for hierarchy "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0"
+Warning (10540): VHDL Signal Declaration warning at pixel_scan.vhd(21): used explicit default value for signal "ast_source_data" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at pixel_scan.vhd(23): used explicit default value for signal "ast_source_valid" because signal was never assigned a value
+Warning (10541): VHDL Signal Declaration warning at pixel_scan.vhd(24): used implicit default value for signal "ast_source_startofpacket" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at pixel_scan.vhd(25): used implicit default value for signal "ast_source_endofpacket" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at pixel_scan.vhd(37): used implicit default value for signal "avs_s1_readdata" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at pixel_scan.vhd(57): object "bar2_found" assigned a value but never read
+Warning (10542): VHDL Variable Declaration warning at pixel_scan.vhd(136): used initial value expression for variable "bar_low" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at pixel_scan.vhd(137): used initial value expression for variable "bar_high" because variable was never assigned a value
+Error (10779): VHDL error at pixel_scan.vhd(225): expression is not constant File: Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/db/ip/SOPC_Video/submodules/pixel_scan.vhd Line: 225
+Error (12152): Can't elaborate user hierarchy "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0" File: Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/db/ip/SOPC_Video/SOPC_Video.v Line: 1803
+Info (144001): Generated suppressed messages file Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/output_files/SOPC_edge.map.smsg
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 2 errors, 213 warnings
+    Error: Peak virtual memory: 470 megabytes
+    Error: Processing ended: Tue Mar 22 15:10:53 2016
+    Error: Elapsed time: 00:01:09
+    Error: Total CPU time (on all processors): 00:00:50
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/output_files/SOPC_edge.map.smsg.
+
+

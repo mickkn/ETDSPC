@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[0]'
+Slack : 6.884
+TNS   : 0.000
+
+Type  : Slow Model Setup 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[2]'
+Slack : 32.941
+TNS   : 0.000
+
+Type  : Slow Model Hold 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[0]'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[2]'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[0]'
+Slack : 8.017
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[2]'
+Slack : 18.015
+TNS   : 0.000
+
+Type  : Slow Model Removal 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[0]'
+Slack : 1.296
+TNS   : 0.000
+
+Type  : Slow Model Removal 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[2]'
+Slack : 1.755
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[0]'
+Slack : 7.873
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'system_clock'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[2]'
+Slack : 17.873
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 97.778
+TNS   : 0.000
+
+Type  : Fast Model Setup 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[0]'
+Slack : 13.968
+TNS   : 0.000
+
+Type  : Fast Model Setup 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[2]'
+Slack : 36.249
+TNS   : 0.000
+
+Type  : Fast Model Hold 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[0]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[2]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[0]'
+Slack : 8.960
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[2]'
+Slack : 18.958
+TNS   : 0.000
+
+Type  : Fast Model Removal 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[0]'
+Slack : 0.721
+TNS   : 0.000
+
+Type  : Fast Model Removal 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[2]'
+Slack : 0.922
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[0]'
+Slack : 7.873
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'system_clock'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'NiosVideo|clock_signals|DE_Clock_Generator_System|pll|clk[2]'
+Slack : 17.873
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 97.778
+TNS   : 0.000
+
+------------------------------------------------------------
