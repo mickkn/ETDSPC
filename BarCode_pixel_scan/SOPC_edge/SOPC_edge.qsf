@@ -490,4 +490,192 @@ set_global_assignment -name SEARCH_PATH EdgeDetection/ -tag from_archive
 set_global_assignment -name QSYS_FILE SOPC_Video.qsys
 set_global_assignment -name VHDL_FILE Video_In_Edge.vhd
 set_global_assignment -name SDC_FILE SOPC_edge.sdc
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE my_signal_tap.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/stp2.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SIGNALTAP_FILE my_signal_tap.stp
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to CLOCK_50 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=1024" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=1024" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|\\pixel_scan:pic_mid_counter[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|avs_s1_read" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|avs_s1_readdata[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|avs_s1_readdata[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|avs_s1_readdata[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|avs_s1_readdata[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|avs_s1_readdata[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|avs_s1_readdata[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|avs_s1_readdata[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|avs_s1_readdata[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[80] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[81] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[82] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[83] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[84] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[85] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[86] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[87] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[88] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[89] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[90] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[91] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[92] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[93] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[94] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[95] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[96] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[97] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[98] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[99] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[100] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[101] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[64]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[102] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[65]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[103] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[66]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[104] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[67]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[105] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[68]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[106] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[69]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[107] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[108] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[70]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[109] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[71]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[110] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[72]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[111] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[73]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[112] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[74]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[113] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[75]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[114] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[76]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[115] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[77]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[116] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[78]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[117] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[79]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[118] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[119] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[80]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[120] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[81]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[121] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[82]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[122] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[83]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[123] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[84]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[124] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[85]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[125] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[86]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[126] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[87]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[127] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[88]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[128] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[89]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[129] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[130] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[90]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[131] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[91]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[132] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|bar_array[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[133] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[134] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[135] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[136] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[137] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[138] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[139] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[140] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[141] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[142] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[143] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[144] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[145] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|ean_number[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[146] -to "SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|state" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[147] -to "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler|stream_out_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[148] -to "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler|stream_out_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[149] -to "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler|stream_out_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[150] -to "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler|stream_out_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[151] -to "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler|stream_out_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[152] -to "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler|stream_out_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[153] -to "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler|stream_out_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[154] -to "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler|stream_out_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[155] -to "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler|stream_out_startofpacket" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=156" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "SOPC_Video:NiosVideo|SOPC_Video_Pixel_RGB_Resampler:pixel_rgb_resampler|stream_out_startofpacket" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=41733" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=27" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=3403" -section_id auto_signaltap_0
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE "Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/my_signal_tap_auto_stripped.stp"

@@ -29,7 +29,7 @@
    {
       datum _sortIndex
       {
-         value = "32";
+         value = "29";
          type = "int";
       }
    }
@@ -37,8 +37,13 @@
    {
       datum _sortIndex
       {
-         value = "17";
+         value = "15";
          type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
       }
    }
    element CPU
@@ -71,25 +76,12 @@
    {
       datum _sortIndex
       {
-         value = "23";
+         value = "20";
          type = "int";
       }
       datum sopceditor_expanded
       {
          value = "1";
-         type = "boolean";
-      }
-   }
-   element Edge_Detection
-   {
-      datum _sortIndex
-      {
-         value = "15";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
          type = "boolean";
       }
    }
@@ -115,7 +107,7 @@
    {
       datum _sortIndex
       {
-         value = "19";
+         value = "17";
          type = "int";
       }
       datum sopceditor_expanded
@@ -128,7 +120,7 @@
    {
       datum _sortIndex
       {
-         value = "20";
+         value = "18";
          type = "int";
       }
       datum sopceditor_expanded
@@ -141,25 +133,12 @@
    {
       datum _sortIndex
       {
-         value = "21";
+         value = "19";
          type = "int";
       }
       datum sopceditor_expanded
       {
          value = "1";
-         type = "boolean";
-      }
-   }
-   element Pixel_Scaler
-   {
-      datum _sortIndex
-      {
-         value = "22";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
          type = "boolean";
       }
    }
@@ -180,7 +159,7 @@
    {
       datum _sortIndex
       {
-         value = "24";
+         value = "21";
          type = "int";
       }
       datum sopceditor_expanded
@@ -189,24 +168,11 @@
          type = "boolean";
       }
    }
-   element Video_Clipper
-   {
-      datum _sortIndex
-      {
-         value = "16";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
    element Video_DMA
    {
       datum _sortIndex
       {
-         value = "18";
+         value = "16";
          type = "int";
       }
       datum sopceditor_expanded
@@ -297,14 +263,6 @@
          type = "int";
       }
    }
-   element sysid_qsys_0.control_slave
-   {
-      datum baseAddress
-      {
-         value = "562608";
-         type = "String";
-      }
-   }
    element lcd.control_slave
    {
       datum baseAddress
@@ -313,11 +271,19 @@
          type = "String";
       }
    }
+   element sysid_qsys_0.control_slave
+   {
+      datum baseAddress
+      {
+         value = "562608";
+         type = "String";
+      }
+   }
    element green_leds
    {
       datum _sortIndex
       {
-         value = "29";
+         value = "26";
          type = "int";
       }
    }
@@ -341,7 +307,7 @@
    {
       datum _sortIndex
       {
-         value = "27";
+         value = "24";
          type = "int";
       }
       datum megawizard_uipreferences
@@ -354,7 +320,7 @@
    {
       datum _sortIndex
       {
-         value = "31";
+         value = "28";
          type = "int";
       }
       datum sopceditor_expanded
@@ -367,24 +333,8 @@
    {
       datum _sortIndex
       {
-         value = "28";
+         value = "25";
          type = "int";
-      }
-   }
-   element green_leds.s1
-   {
-      datum baseAddress
-      {
-         value = "562512";
-         type = "String";
-      }
-   }
-   element Barcode_scan_0.s1
-   {
-      datum baseAddress
-      {
-         value = "562176";
-         type = "String";
       }
    }
    element Onchip_Memory.s1
@@ -392,22 +342,6 @@
       datum baseAddress
       {
          value = "540672";
-         type = "String";
-      }
-   }
-   element switch.s1
-   {
-      datum baseAddress
-      {
-         value = "562496";
-         type = "String";
-      }
-   }
-   element sdram_0.s1
-   {
-      datum baseAddress
-      {
-         value = "16777216";
          type = "String";
       }
    }
@@ -419,6 +353,14 @@
          type = "String";
       }
    }
+   element green_leds.s1
+   {
+      datum baseAddress
+      {
+         value = "562512";
+         type = "String";
+      }
+   }
    element timer_system.s1
    {
       datum baseAddress
@@ -427,11 +369,35 @@
          type = "String";
       }
    }
+   element sdram_0.s1
+   {
+      datum baseAddress
+      {
+         value = "16777216";
+         type = "String";
+      }
+   }
    element red_leds.s1
    {
       datum baseAddress
       {
          value = "562528";
+         type = "String";
+      }
+   }
+   element Barcode_scan_0.s1
+   {
+      datum baseAddress
+      {
+         value = "562176";
+         type = "String";
+      }
+   }
+   element switch.s1
+   {
+      datum baseAddress
+      {
+         value = "562496";
          type = "String";
       }
    }
@@ -452,7 +418,7 @@
    {
       datum _sortIndex
       {
-         value = "30";
+         value = "27";
          type = "int";
       }
    }
@@ -476,7 +442,7 @@
    {
       datum _sortIndex
       {
-         value = "25";
+         value = "22";
          type = "int";
       }
    }
@@ -484,7 +450,7 @@
    {
       datum _sortIndex
       {
-         value = "26";
+         value = "23";
          type = "int";
       }
    }
@@ -543,7 +509,7 @@
  <parameter name="projectName" value="SOPC_edge.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1458641289006" />
+ <parameter name="timeStamp" value="1459414603795" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -626,10 +592,11 @@
    dir="start" />
  <interface name="bypass" internal="SobleEdge_0.conduit_end" />
  <interface
-   name="test"
-   internal="Barcode_scan_0.conduit_end"
+   name="restart"
+   internal="Barcode_scan_0.restart"
    type="conduit"
    dir="end" />
+ <interface name="debug" internal="Barcode_scan_0.debug" type="conduit" dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -709,20 +676,6 @@
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
  </module>
  <module
-   kind="altera_up_avalon_video_scaler"
-   version="13.0"
-   enabled="0"
-   name="Pixel_Scaler">
-  <parameter name="width_scaling" value="1" />
-  <parameter name="height_scaling" value="1" />
-  <parameter name="width_in" value="640" />
-  <parameter name="height_in" value="480" />
-  <parameter name="color_bits" value="10" />
-  <parameter name="color_planes" value="3" />
-  <parameter name="AUTO_CLOCK_RESET_CLOCK_RATE" value="50000000" />
-  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
- </module>
- <module
    kind="altera_up_avalon_video_vga_controller"
    version="13.0"
    enabled="1"
@@ -739,30 +692,6 @@
    enabled="1"
    name="Video_In_Decoder">
   <parameter name="video_source">5MP Daughtercard (THDB_D5M)</parameter>
-  <parameter name="AUTO_CLOCK_RESET_CLOCK_RATE" value="50000000" />
-  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
- </module>
- <module
-   kind="altera_up_avalon_video_clipper"
-   version="13.0"
-   enabled="0"
-   name="Video_Clipper">
-  <parameter name="width_in" value="800" />
-  <parameter name="height_in" value="600" />
-  <parameter name="drop_left" value="80" />
-  <parameter name="drop_right" value="80" />
-  <parameter name="drop_top" value="60" />
-  <parameter name="drop_bottom" value="60" />
-  <parameter name="add_left" value="0" />
-  <parameter name="add_right" value="0" />
-  <parameter name="add_top" value="0" />
-  <parameter name="add_bottom" value="0" />
-  <parameter name="add_value_plane_1" value="0" />
-  <parameter name="add_value_plane_2" value="0" />
-  <parameter name="add_value_plane_3" value="0" />
-  <parameter name="add_value_plane_4" value="0" />
-  <parameter name="color_bits" value="8" />
-  <parameter name="color_planes" value="1" />
   <parameter name="AUTO_CLOCK_RESET_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
  </module>
@@ -802,16 +731,6 @@
   <parameter name="video_format" value="PAL" />
   <parameter name="d5m_resolution" value="2592 x 1944" />
   <parameter name="exposure" value="false" />
-  <parameter name="AUTO_CLOCK_RESET_CLOCK_RATE" value="50000000" />
-  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
- </module>
- <module
-   kind="altera_up_avalon_video_edge_detection"
-   version="13.0"
-   enabled="0"
-   name="Edge_Detection">
-  <parameter name="width" value="640" />
-  <parameter name="intensity" value="1" />
   <parameter name="AUTO_CLOCK_RESET_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
  </module>
@@ -1229,11 +1148,6 @@
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
-   kind="avalon_streaming"
-   version="13.0"
-   start="Pixel_Buffer_DMA.avalon_pixel_source"
-   end="Pixel_RGB_Resampler.avalon_rgb_sink" />
- <connection
    kind="avalon"
    version="13.0"
    start="Pixel_Buffer_DMA.avalon_pixel_dma_master"
@@ -1347,16 +1261,6 @@
    kind="reset"
    version="13.0"
    start="clk_0.clk_reset"
-   end="Pixel_Scaler.clock_reset_reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="CPU.jtag_debug_module_reset"
-   end="Pixel_Scaler.clock_reset_reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
    end="VGA_Controller.clock_reset_reset" />
  <connection
    kind="reset"
@@ -1377,16 +1281,6 @@
    kind="reset"
    version="13.0"
    start="clk_0.clk_reset"
-   end="Video_Clipper.clock_reset_reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="CPU.jtag_debug_module_reset"
-   end="Video_Clipper.clock_reset_reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
    end="Video_DMA.clock_reset_reset" />
  <connection
    kind="reset"
@@ -1403,16 +1297,6 @@
    version="13.0"
    start="CPU.jtag_debug_module_reset"
    end="AV_Config.clock_reset_reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="Edge_Detection.clock_reset_reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="CPU.jtag_debug_module_reset"
-   end="Edge_Detection.clock_reset_reset" />
  <connection kind="reset" version="13.0" start="clk_0.clk_reset" end="CPU.reset_n" />
  <connection
    kind="reset"
@@ -1458,16 +1342,6 @@
    kind="clock"
    version="13.0"
    start="Clock_Signals.sys_clk"
-   end="Edge_Detection.clock_reset" />
- <connection
-   kind="clock"
-   version="13.0"
-   start="Clock_Signals.sys_clk"
-   end="Video_Clipper.clock_reset" />
- <connection
-   kind="clock"
-   version="13.0"
-   start="Clock_Signals.sys_clk"
    end="Video_DMA.clock_reset" />
  <connection
    kind="clock"
@@ -1484,11 +1358,6 @@
    version="13.0"
    start="Clock_Signals.sys_clk"
    end="Pixel_RGB_Resampler.clock_reset" />
- <connection
-   kind="clock"
-   version="13.0"
-   start="Clock_Signals.sys_clk"
-   end="Pixel_Scaler.clock_reset" />
  <connection
    kind="interrupt"
    version="13.0"
@@ -1620,16 +1489,6 @@
    version="13.0"
    start="video_bayer_resampler.avalon_bayer_source"
    end="video_clipper_0.avalon_clipper_sink" />
- <connection
-   kind="avalon_streaming"
-   version="13.0"
-   start="video_clipper_0.avalon_clipper_source"
-   end="video_scaler_0.avalon_scaler_sink" />
- <connection
-   kind="avalon_streaming"
-   version="13.0"
-   start="video_scaler_0.avalon_scaler_source"
-   end="video_rgb_resampler_0.avalon_rgb_sink" />
  <connection
    kind="clock"
    version="13.0"
@@ -2158,16 +2017,6 @@
    start="clk_vga.clk_reset"
    end="SobleEdge_0.reset" />
  <connection
-   kind="avalon_streaming"
-   version="13.0"
-   start="video_rgb_resampler_0.avalon_rgb_source"
-   end="Barcode_scan_0.avalon_streaming_sink" />
- <connection
-   kind="avalon_streaming"
-   version="13.0"
-   start="Barcode_scan_0.avalon_streaming_source"
-   end="Video_DMA.avalon_dma_sink" />
- <connection
    kind="reset"
    version="13.0"
    start="CPU.jtag_debug_module_reset"
@@ -2226,6 +2075,31 @@
    version="13.0"
    start="Clock_Signals.sys_clk"
    end="Barcode_scan_0.clock_st" />
+ <connection
+   kind="avalon_streaming"
+   version="13.0"
+   start="video_rgb_resampler_0.avalon_rgb_source"
+   end="Barcode_scan_0.avalon_streaming_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="13.0"
+   start="Pixel_Buffer_DMA.avalon_pixel_source"
+   end="Pixel_RGB_Resampler.avalon_rgb_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="13.0"
+   start="video_clipper_0.avalon_clipper_source"
+   end="video_scaler_0.avalon_scaler_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="13.0"
+   start="video_scaler_0.avalon_scaler_source"
+   end="video_rgb_resampler_0.avalon_rgb_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="13.0"
+   start="Barcode_scan_0.avalon_streaming_source"
+   end="Video_DMA.avalon_dma_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="0" />
 </system>

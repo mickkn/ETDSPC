@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Thu Mar 31 14:02:18 2016
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : SOPC_edge
+Top-level Entity Name : Video_Edge_Detection
+Family : Cyclone II
+Total logic elements : 9,163
+    Total combinational functions : 7,354
+    Dedicated logic registers : 5,501
+Total registers : 5501
+Total pins : 205
+Total virtual pins : 0
+Total memory bits : 181,632
+Embedded Multiplier 9-bit elements : 7
+Total PLLs : 1

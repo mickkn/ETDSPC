@@ -8,8 +8,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_TEXTIO.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 USE STD.TEXTIO.ALL;
-USE WORK.sim_avalon.ALL;		--Lib from exercise
---use work.io_utils.all;
+USE WORK.sim_avalon.ALL;
 
 ENTITY pixel_scan_tb IS
     GENERIC (
@@ -34,14 +33,14 @@ ARCHITECTURE bench OF pixel_scan_tb IS
 		ast_sink_startofpacket  	: IN  std_logic;
 		ast_sink_endofpacket 		: IN  std_logic;
 		
-		--bidirectional
-		ast_source_data  			: OUT std_logic_vector(7 downto 0);
+		ast_source_data  			: BUFFER std_logic_vector(7 downto 0);
 		ast_source_ready 			: IN std_logic;
-		ast_source_valid 			: OUT std_logic;
-		ast_source_startofpacket	: OUT std_logic;
-		ast_source_endofpacket 		: OUT std_logic;
+		ast_source_valid 			: BUFFER std_logic;
+		ast_source_startofpacket	: BUFFER std_logic;
+		ast_source_endofpacket 		: BUFFER std_logic;
 		
-		debug_state					: BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
+		restart						: IN STD_LOGIC;
+		debug_state					: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 		
 		avs_s1_clk     				: IN  std_logic;                      	-- Avalon CLK
 		avs_s1_reset_n 				: IN  std_logic;                      	-- Avalon Reset
@@ -59,7 +58,6 @@ ARCHITECTURE bench OF pixel_scan_tb IS
 	SIGNAL clk                      : std_logic                     := '0';
 
 	--MM PORTS
-	
 	SIGNAL avs_s1_clk     			: std_logic := '0';
 	SIGNAL avs_s1_reset_n 			: std_logic := '1';
 	SIGNAL avs_s1_write          	: std_logic := '0';
@@ -82,6 +80,7 @@ ARCHITECTURE bench OF pixel_scan_tb IS
 	SIGNAL ast_source_startofpacket : std_logic                     := 'U';
 	SIGNAL ast_source_endofpacket   : std_logic                     := 'U';
 	
+	SIGNAL restart					: STD_LOGIC;
 	SIGNAL debug_state				: STD_LOGIC_VECTOR(7 DOWNTO 0);
 	
 	-- clock
@@ -90,7 +89,6 @@ ARCHITECTURE bench OF pixel_scan_tb IS
 	
 	constant read_wait_time  : integer := 1;
 	constant write_wait_time : integer := 2;
-	
 	
 BEGIN
 
@@ -113,6 +111,7 @@ BEGIN
 		ast_sink_startofpacket		=> ast_source_startofpacket,
 		ast_sink_endofpacket		=> ast_source_endofpacket,
 
+		restart						=> restart,
 		debug_state					=> debug_state,
 		
 		--MM
@@ -208,13 +207,13 @@ BEGIN
 	
 		avalon_mm_read
 		(
-					write_wait_time,
-					rd_addr,
-					avs_s1_clk,
-					avs_s1_chipselect,
-					avs_s1_read,
-					avs_s1_address,
-					avs_s1_readdata
+			write_wait_time,
+			rd_addr,
+			avs_s1_clk,
+			avs_s1_chipselect,
+			avs_s1_read,
+			avs_s1_address,
+			avs_s1_readdata
 		);
 		wait until clk = '1';
 		

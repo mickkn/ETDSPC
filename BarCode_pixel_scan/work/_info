@@ -25,45 +25,49 @@ Z6 tExplicit 1
 !i10b 1
 !s108 1458119030.374000
 Epixel_scan
-Z7 w1458655692
-Z8 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z7 w1459514837
+Z8 DPx8 synopsys 10 attributes 0 22 J^T`lPA_8_J<l8kQiVE]>2
+Z9 DPx4 ieee 14 std_logic_misc 0 22 >dU:RInm^_6_mBJ^<6QGY2
+Z10 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R1
 R2
-Z9 dY:\Desktop\ETDSPC\BarCode_pixel_scan
-Z10 8Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan.vhd
-Z11 FY:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan.vhd
+Z11 dY:\Desktop\ETDSPC\BarCode_pixel_scan
+Z12 8Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan.vhd
+Z13 FY:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan.vhd
 l0
-L5
-Vha`cnggEAWLgMEdWdW[CI1
+L6
+VflVBX4ZaK24QlOc>VzBoW3
 R4
 32
-Z12 !s108 1458655696.654000
-Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan.vhd|
-Z14 !s107 Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan.vhd|
+Z14 !s108 1459514841.718000
+Z15 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan.vhd|
+Z16 !s107 Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan.vhd|
 R5
 R6
-!s100 OjdZ;o87aBjWToSz817fO2
+!s100 O?XHkCOzMd_L5N8Qb3IEc3
 !i10b 1
 Abeh
 R8
+R9
+R10
 R1
 R2
-DEx4 work 10 pixel_scan 0 22 ha`cnggEAWLgMEdWdW[CI1
-l66
-L43
-VAJ6[UfPdcgRATBSC]:S840
+DEx4 work 10 pixel_scan 0 22 flVBX4ZaK24QlOc>VzBoW3
+l78
+L44
+VZ4;d@]_I1_P^AJe3cHAOI1
 R4
 32
-R12
-R13
 R14
+R15
+R16
 R5
 R6
-!s100 _OQa@e@^VFW@l7>DY=_EB2
+!s100 YI<LWE>=X:PDjcV3mWRBZ1
 !i10b 1
 Abench
-R8
-Z15 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R10
+Z17 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
 R1
 R2
 DEx4 work 10 pixel_scan 0 22 ET^QiXK^MXNPYOeO6l]?J2
@@ -84,54 +88,54 @@ R3
 !s100 2jOVB=XZS4A88nIBC;Kz>2
 !i10b 1
 Epixel_scan_tb
-Z16 w1458650500
-Z17 DPx4 work 10 sim_avalon 0 22 g^n3TXbVgP7nOQK48oBCn0
-R8
-R15
+Z18 w1459513819
+Z19 DPx4 work 10 sim_avalon 0 22 g^n3TXbVgP7nOQK48oBCn0
+R10
+R17
 R1
 R2
-R9
-Z18 8Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan_tb.vhd
-Z19 FY:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan_tb.vhd
+R11
+Z20 8Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan_tb.vhd
+Z21 FY:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan_tb.vhd
 l0
-L14
+L13
 VE]D<]K[XRj>B;XcQHUL2d0
 R4
 32
-Z20 !s108 1458655696.794000
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan_tb.vhd|
-Z22 !s107 Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan_tb.vhd|
+Z22 !s108 1459514841.868000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan_tb.vhd|
+Z24 !s107 Y:/Desktop/ETDSPC/BarCode_pixel_scan/pixel_scan_tb.vhd|
 R5
 R6
-!s100 ]aT^SRPAE4cMDOj;X`Z323
+!s100 ?_00fNCd>zWD62B:e1:F]0
 !i10b 1
 Abench
+R19
+R10
 R17
-R8
-R15
 R1
 R2
 DEx4 work 13 pixel_scan_tb 0 22 E]D<]K[XRj>B;XcQHUL2d0
-l95
-L23
-VCk>87=4I1nISl=<B<I<n60
-!s100 RY2]zc7GiReX;`U>Y]Q:S2
+l93
+L22
+VD_9b`VLgZfHiznbIXOnId2
+!s100 @B6YThdObVC5zm6HYIA4n1
 R4
 32
-R20
-R21
 R22
+R23
+R24
 R5
 R6
 !i10b 1
 Psim_avalon
-R8
+R10
 R1
 R2
-Z23 w1458642428
-R9
-Z24 8Y:/Desktop/ETDSPC/BarCode_pixel_scan/sim_avalon.vhd
-Z25 FY:/Desktop/ETDSPC/BarCode_pixel_scan/sim_avalon.vhd
+Z25 w1458646028
+R11
+Z26 8Y:/Desktop/ETDSPC/BarCode_pixel_scan/sim_avalon.vhd
+Z27 FY:/Desktop/ETDSPC/BarCode_pixel_scan/sim_avalon.vhd
 l0
 L5
 Vg^n3TXbVgP7nOQK48oBCn0
@@ -140,26 +144,26 @@ R4
 32
 b1
 !i10b 1
-Z26 !s108 1458655696.944000
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/Desktop/ETDSPC/BarCode_pixel_scan/sim_avalon.vhd|
-Z28 !s107 Y:/Desktop/ETDSPC/BarCode_pixel_scan/sim_avalon.vhd|
+Z28 !s108 1459514842.478000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/Desktop/ETDSPC/BarCode_pixel_scan/sim_avalon.vhd|
+Z30 !s107 Y:/Desktop/ETDSPC/BarCode_pixel_scan/sim_avalon.vhd|
 R5
 R6
 Bbody
-R17
-R8
+R19
+R10
 R1
 R2
 l0
 L28
-Z29 V<=m@o76lU^h^OR=<5P2=d3
-Z30 !s100 fbI22X9zQ9>nlc7Afd39B1
+Z31 V<=m@o76lU^h^OR=<5P2=d3
+Z32 !s100 fbI22X9zQ9>nlc7Afd39B1
 R4
 32
 !i10b 1
-R26
-R27
 R28
+R29
+R30
 R5
 R6
 nbody

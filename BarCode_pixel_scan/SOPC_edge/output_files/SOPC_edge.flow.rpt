@@ -1,5 +1,5 @@
 Flow report for SOPC_edge
-Tue Mar 22 15:10:52 2016
+Fri Apr 01 14:53:26 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Flow Failed - Tue Mar 22 15:10:52 2016          ;
+; Flow Status                        ; Successful - Fri Apr 01 14:53:26 2016           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; SOPC_edge                                       ;
 ; Top-level Entity Name              ; Video_Edge_Detection                            ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 9,230 / 33,216 ( 28 % )                         ;
+;     Total combinational functions  ; 7,493 / 33,216 ( 23 % )                         ;
+;     Dedicated logic registers      ; 6,213 / 33,216 ( 19 % )                         ;
+; Total registers                    ; 6281                                            ;
+; Total pins                         ; 205 / 475 ( 43 % )                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 333,440 / 483,840 ( 69 % )                      ;
+; Embedded Multiplier 9-bit elements ; 7 / 70 ( 10 % )                                 ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -64,59 +64,98 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/22/2016 15:09:46 ;
+; Start date & time ; 04/01/2016 14:49:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SOPC_edge           ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                    ;
-+-------------------------------------+---------------------------------------+---------------+----------------------+----------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name          ; Section Id     ;
-+-------------------------------------+---------------------------------------+---------------+----------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 121367230331.145865578502840          ; --            ; --                   ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --                   ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --                   ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --                   ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --                   ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; Video_Edge_Detection ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; Video_Edge_Detection ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; Video_Edge_Detection ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --                   ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --                   ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --                   ; --             ;
-; SEARCH_PATH                         ; SOPC_Video/synthesis/                 ; --            ; --                   ; --             ;
-; SEARCH_PATH                         ; SOPC_Video/synthesis/submodules/      ; --            ; --                   ; --             ;
-; SEARCH_PATH                         ; output_files/                         ; --            ; --                   ; --             ;
-; SEARCH_PATH                         ; EdgeDetection/                        ; --            ; --                   ; --             ;
-; TOP_LEVEL_ENTITY                    ; Video_Edge_Detection                  ; SOPC_edge     ; --                   ; --             ;
-+-------------------------------------+---------------------------------------+---------------+----------------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                               ;
++-------------------------------------+--------------------------------------------------------------------------------+---------------+----------------------+------------------+
+; Assignment Name                     ; Value                                                                          ; Default Value ; Entity Name          ; Section Id       ;
++-------------------------------------+--------------------------------------------------------------------------------+---------------+----------------------+------------------+
+; COMPILER_SIGNATURE_ID               ; 121367230331.145951494303172                                                   ; --            ; --                   ; --               ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                                           ; --            ; --                   ; eda_simulation   ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                                         ; <None>        ; --                   ; --               ;
+; ENABLE_SIGNALTAP                    ; On                                                                             ; --            ; --                   ; --               ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                             ; --            ; --                   ; --               ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                              ; --            ; --                   ; --               ;
+; NUM_PARALLEL_PROCESSORS             ; All                                                                            ; --            ; --                   ; --               ;
+; PARTITION_COLOR                     ; 16764057                                                                       ; --            ; Video_Edge_Detection ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                          ; --            ; Video_Edge_Detection ; Top              ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                         ; --            ; Video_Edge_Detection ; Top              ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                            ; --            ; --                   ; --               ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                          ; --            ; --                   ; --               ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                   ; --            ; --                   ; --               ;
+; SEARCH_PATH                         ; SOPC_Video/synthesis/                                                          ; --            ; --                   ; --               ;
+; SEARCH_PATH                         ; SOPC_Video/synthesis/submodules/                                               ; --            ; --                   ; --               ;
+; SEARCH_PATH                         ; output_files/                                                                  ; --            ; --                   ; --               ;
+; SEARCH_PATH                         ; EdgeDetection/                                                                 ; --            ; --                   ; --               ;
+; SLD_FILE                            ; Y:/Desktop/ETDSPC/BarCode_pixel_scan/SOPC_edge/my_signal_tap_auto_stripped.stp ; --            ; --                   ; --               ;
+; SLD_NODE_CREATOR_ID                 ; 110                                                                            ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                                  ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                                                        ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                                                         ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                  ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                     ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_FLOW_USE_GENERATED=0                                                 ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                                              ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                                                         ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                                                   ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=1                                                            ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                                       ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                           ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                   ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                  ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SEGMENT_SIZE=1024                                                          ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=1024                                                          ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=156                                                              ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=1                                                             ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_LOWORD=41733                                                      ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=000000000000000000000000000                                 ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=27                                                   ; --            ; --                   ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_HIWORD=3403                                                       ; --            ; --                   ; auto_signaltap_0 ;
+; TOP_LEVEL_ENTITY                    ; Video_Edge_Detection                                                           ; SOPC_edge     ; --                   ; --               ;
+; USE_SIGNALTAP_FILE                  ; my_signal_tap.stp                                                              ; --            ; --                   ; --               ;
++-------------------------------------+--------------------------------------------------------------------------------+---------------+----------------------+------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:07     ; 1.0                     ; 470 MB              ; 00:00:48                           ;
-; Total                ; 00:01:07     ; --                      ; --                  ; 00:00:48                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:02:09     ; 1.0                     ; 540 MB              ; 00:01:54                           ;
+; Fitter                    ; 00:01:15     ; 1.2                     ; 645 MB              ; 00:01:25                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 383 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:10     ; 1.0                     ; 460 MB              ; 00:00:09                           ;
+; EDA Netlist Writer        ; 00:00:16     ; 1.0                     ; 408 MB              ; 00:00:13                           ;
+; Total                     ; 00:03:56     ; --                      ; --                  ; 00:03:46                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
-+----------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
+; Fitter                    ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
+; Assembler                 ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
+; TimeQuest Timing Analyzer ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
+; EDA Netlist Writer        ; MICKKIRKEGA44A2  ; Windows 7 ; 6.1        ; i686           ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off SOPC_edge -c SOPC_edge
+quartus_fit --read_settings_files=off --write_settings_files=off SOPC_edge -c SOPC_edge
+quartus_asm --read_settings_files=off --write_settings_files=off SOPC_edge -c SOPC_edge
+quartus_sta SOPC_edge -c SOPC_edge
+quartus_eda --read_settings_files=off --write_settings_files=off SOPC_edge -c SOPC_edge
 
 
 

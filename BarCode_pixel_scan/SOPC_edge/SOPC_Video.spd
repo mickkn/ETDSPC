@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_nios_custom_instr_floating_point_0.vho"
+   type="VHDL"
+   library="nios_custom_instr_floating_point_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_switch.vhd"
+   type="VHDL"
+   library="switch" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_red_leds.vhd"
+   type="VHDL"
+   library="red_leds" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_lcd.vhd"
+   type="VHDL"
+   library="lcd" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_timer_system.vhd"
+   type="VHDL"
+   library="timer_system" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_sdram_0.vhd"
+   type="VHDL"
+   library="sdram_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_sysid_qsys_0.vho"
+   type="VHDL"
+   library="sysid_qsys_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_video_rgb_resampler_0.vhd"
+   type="VHDL"
+   library="video_rgb_resampler_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_scaler_shrink.v"
+   type="VERILOG"
+   library="video_scaler_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_scaler_multiply_width.v"
+   type="VERILOG"
+   library="video_scaler_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_scaler_multiply_height.v"
+   type="VERILOG"
+   library="video_scaler_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_video_scaler_0.vhd"
+   type="VHDL"
+   library="video_scaler_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_clipper_add.v"
+   type="VERILOG"
+   library="video_clipper_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_clipper_drop.v"
+   type="VERILOG"
+   library="video_clipper_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_clipper_counters.v"
+   type="VERILOG"
+   library="video_clipper_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_video_clipper_0.vhd"
+   type="VHDL"
+   library="video_clipper_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_video_bayer_resampler.vhd"
+   type="VHDL"
+   library="video_bayer_resampler" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_jtag_uart_0.vhd"
+   type="VHDL"
+   library="jtag_uart_0" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_Clock_Signals.vhd"
+   type="VHDL"
+   library="Clock_Signals" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU.sdc"
+   type="SDC"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU.vhd"
+   type="VHDL"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_jtag_debug_module_sysclk.vhd"
+   type="VHDL"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_jtag_debug_module_tck.vhd"
+   type="VHDL"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_jtag_debug_module_wrapper.vhd"
+   type="VHDL"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_nios2_waves.do"
+   type="OTHER"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_ociram_default_contents.dat"
+   type="DAT"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_ociram_default_contents.hex"
+   type="HEX"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_ociram_default_contents.mif"
+   type="MIF"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_oci_test_bench.vhd"
+   type="VHDL"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_rf_ram_a.dat"
+   type="DAT"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_rf_ram_a.hex"
+   type="HEX"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_rf_ram_a.mif"
+   type="MIF"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_rf_ram_b.dat"
+   type="DAT"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_rf_ram_b.hex"
+   type="HEX"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_rf_ram_b.mif"
+   type="MIF"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_CPU_test_bench.vhd"
+   type="VHDL"
+   library="CPU" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_serial_bus_controller.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_slow_clock_generator.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init_dc2.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init_d5m.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init_lcm.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init_ltm.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init_ob_de2_35.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init_ob_adv7181.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init_ob_de2_70.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init_ob_de2_115.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init_ob_audio.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_av_config_auto_init_ob_adv7180.v"
+   type="VERILOG"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_AV_Config.vhd"
+   type="VHDL"
+   library="AV_Config" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_dma_control_slave.v"
+   type="VERILOG"
+   library="Video_DMA" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_dma_to_memory.v"
+   type="VERILOG"
+   library="Video_DMA" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_dma_to_stream.v"
+   type="VERILOG"
+   library="Video_DMA" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_Video_DMA.vhd"
+   type="VHDL"
+   library="Video_DMA" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_itu_656_decoder.v"
+   type="VERILOG"
+   library="Video_In_Decoder" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_decoder_add_endofpacket.v"
+   type="VERILOG"
+   library="Video_In_Decoder" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_camera_decoder.v"
+   type="VERILOG"
+   library="Video_In_Decoder" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_video_dual_clock_fifo.v"
+   type="VERILOG"
+   library="Video_In_Decoder" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_Video_In_Decoder.vhd"
+   type="VHDL"
+   library="Video_In_Decoder" />
+ <file
+   path="SOPC_Video/simulation/submodules/altera_up_avalon_video_vga_timing.v"
+   type="VERILOG"
+   library="VGA_Controller" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_VGA_Controller.vhd"
+   type="VHDL"
+   library="VGA_Controller" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_Pixel_RGB_Resampler.vhd"
+   type="VHDL"
+   library="Pixel_RGB_Resampler" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_Pixel_Buffer_DMA.vhd"
+   type="VHDL"
+   library="Pixel_Buffer_DMA" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_Pixel_Buffer.vhd"
+   type="VHDL"
+   library="Pixel_Buffer" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_Dual_Clock_FIFO.vhd"
+   type="VHDL"
+   library="Dual_Clock_FIFO" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_Onchip_Memory.hex"
+   type="HEX"
+   library="Onchip_Memory" />
+ <file
+   path="SOPC_Video/simulation/submodules/SOPC_Video_Onchip_Memory.vhd"
+   type="VHDL"
+   library="Onchip_Memory" />
+ <file path="SOPC_Video/simulation/SOPC_Video.vhd" type="VHDL" />
+ <file path="SOPC_Video/simulation/sopc_video_width_adapter.vhd" type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_width_adapter_003.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_width_adapter_005.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_width_adapter_008.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_rst_controller.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_rst_controller_001.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_rst_controller_003.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_sdram_0_s1_translator_avalon_universal_slave_0_agent.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_cpu_instruction_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_cpu_data_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_pixel_buffer_dma_avalon_pixel_dma_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_video_dma_avalon_dma_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_cpu_jtag_debug_module_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_onchip_memory_s1_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_sdram_0_s1_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_pixel_buffer_avalon_sram_slave_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_av_config_avalon_av_config_slave_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_video_dma_avalon_dma_control_slave_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_jtag_uart_0_avalon_jtag_slave_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_sysid_qsys_0_control_slave_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_timer_system_s1_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_lcd_control_slave_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_red_leds_s1_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_switch_s1_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_altera_up_sd_card_avalon_interface_0_avalon_sdcard_slave_translator.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_cpu_instruction_master_translator_avalon_universal_master_0_agent.vhd"
+   type="VHDL" />
+ <file
+   path="SOPC_Video/simulation/sopc_video_pixel_buffer_dma_avalon_pixel_dma_master_translator_avalon_universal_master_0_agent.vhd"
+   type="VHDL" />
+ <topLevel name="SOPC_Video" />
+ <deviceFamily name="cycloneii" />
+ <modelMap
+   controllerPath="SOPC_Video.Onchip_Memory"
+   modelPath="SOPC_Video.Onchip_Memory" />
+</simPackage>

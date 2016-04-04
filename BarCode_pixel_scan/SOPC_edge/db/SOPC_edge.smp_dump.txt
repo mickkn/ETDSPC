@@ -1,4 +1,14 @@
 
+State Machine - |Video_Edge_Detection|SOPC_Video:NiosVideo|pixel_scan:barcode_scan_0|state
+Name state.done state.build_ean state.decode_bar_array state.build_bar_array state.find_bar_width state.detect_black state.wait_state 
+state.wait_state 0 0 0 0 0 0 0 
+state.detect_black 0 0 0 0 0 1 1 
+state.find_bar_width 0 0 0 0 1 0 1 
+state.build_bar_array 0 0 0 1 0 0 1 
+state.decode_bar_array 0 0 1 0 0 0 1 
+state.build_ean 0 1 0 0 0 0 1 
+state.done 1 0 0 0 0 0 1 
+
 State Machine - |Video_Edge_Detection|SOPC_Video:NiosVideo|Altera_UP_SD_Card_Avalon_Interface:altera_up_sd_card_avalon_interface_0|current_cmd_state
 Name current_cmd_state.s_UPDATE_AUX_SR current_cmd_state.s_WAIT_RESPONSE current_cmd_state.s_WAIT_COMMAND current_cmd_state.s_RESET_CMD 
 current_cmd_state.s_RESET_CMD 0 0 0 0 

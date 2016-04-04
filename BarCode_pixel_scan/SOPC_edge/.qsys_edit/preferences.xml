@@ -5,15 +5,18 @@
   <columns>
    <connections preferredWidth="399" />
    <irq preferredWidth="34" />
+   <name preferredWidth="225" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="271" />
-   <clocksource preferredWidth="270" />
-   <frequency preferredWidth="251" />
+   <clockname preferredWidth="301" />
+   <clocksource preferredWidth="299" />
+   <frequency preferredWidth="286" />
   </columns>
  </clocktable>
- <window width="1100" height="756" x="0" y="0" />
- <library expandedCategories="Project/MIPO,Project,Library" />
+ <window width="1280" height="756" x="0" y="0" />
+ <library expandedCategories="Project/MIPO,Library,Project" />
+ <hdlexample language="VHDL" />
+ <generation synthesis="VHDL" simulation="NONE" />
 </preferences>

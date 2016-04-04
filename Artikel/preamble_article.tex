@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+
+% Pretty much all of the ams maths packages
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+
+% Allows you to manipulate the page a bit
+\usepackage[a4paper]{geometry}
+
+% Pulls the page out a bit - makes it look better (in my opinion)
+\usepackage{a4wide}
+
+% Removes paragraph indentation (not needed most of the time now)
+\usepackage{parskip}
+
+% Allows inclusion of graphics easily and configurably
+\usepackage{graphicx}
+
+% Provides ways to make nice looking tables
+\usepackage{booktabs}
+
+% Allows you to rotate tables and figures
+\usepackage{rotating}
+
+% Allows shading of table cells
+\usepackage{colortbl}
+% Define a simple command to use at the start of a table row to make it have a shaded background
+\newcommand{\gray}{\rowcolor[gray]{.9}}
+
+\usepackage{textcomp}
+
+% Provides commands to make subfigures (figures with (a), (b) and (c))
+\usepackage{subfigure}
+
+% Typesets URLs sensibly - with tt font, clickable in PDFs, and not breaking across lines
+\usepackage{url}
+
+% Makes references hyperlinks in PDF output
+\usepackage{hyperref}
+
+% Provides ways to include syntax-highlighted source code
+\usepackage{listings}
+\lstset{frame=single, basicstyle=\ttfamily}
+
+% Provides Harvard-style referencing
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{,}{,}
+
+% Provides good access to colours
+\usepackage{color}
+\usepackage{xcolor}
+
+% Simple command I defined to allow me to mark TODO items in red
+\newcommand{\todo}[1] {\textbf{\textcolor{red}{#1}}}
+
+% Allows fancy stuff in the page header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% Vastly improves the standard formatting of captions
+\usepackage[margin=10pt,font=small,labelfont=bf, labelsep=endash]{caption}
+
+% Standard title, author etc.
+\title{COMP6024\\Model Specification based on \citet{Telfer:2010}}
+\author{Robin Wilson\\ID: 21985588}
+\date{}
+% Put text on the left-hand and right-hand side of the header
+\fancyhead{}
+\lhead{COMP6024}
+\rhead{Robin Wilson}
+\chead{}

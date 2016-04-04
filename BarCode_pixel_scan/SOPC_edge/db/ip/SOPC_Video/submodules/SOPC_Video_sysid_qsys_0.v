@@ -36,7 +36,7 @@ module SOPC_Video_sysid_qsys_0 (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1458655800 : 287454020;
+  assign readdata = address ? 1459514959 : 287454020;
 
 endmodule
 
